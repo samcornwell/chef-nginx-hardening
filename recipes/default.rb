@@ -128,10 +128,37 @@ cookbook_file '/etc/ssl/certs/dod-root-certs.pem' do
   action :create
 end
 
+cookbook_file '/etc/ssl/certs/DOD.crl' do
+  source 'DOD.crl'
+  owner 'root'
+  group 'root'
+  mode '0660'
+  action :create
+end
+
 cookbook_file '/etc/nginx/sites-enabled/vserver1.conf' do
   source 'vserver1.conf'
   owner 'root'
   group 'root'
   mode '0660'
+  action :create
+end
+
+directory '/usr/share/nginx/html/app1' do
+  owner 'nginx'
+  group 'nginx'
+  mode '1660'
+  action :create
+end
+directory '/usr/share/nginx/html/app2' do
+  owner 'nginx'
+  group 'nginx'
+  mode '1660'
+  action :create
+end
+directory '/usr/share/nginx/html/app3' do
+  owner 'nginx'
+  group 'nginx'
+  mode '1660'
   action :create
 end

@@ -58,16 +58,20 @@ default['nginx-hardening']['options'] = {
 
   'limit_conn_zone' => '$binary_remote_addr zone=default:10m',
   'limit_conn' => 'default 5',
-
+  'disable_symlinks' => 'on',
+  'autoindex' => 'off',
+  'ssl_client_certificate' => '/etc/ssl/certs/dod-root-certs.pem',
+  'ssl_crl' => '/etc/ssl/certs/DOD.crl',
+  'root' => '/usr/share/nginx/html/app1',
   'add_header' => [
+    # XSS filter
+    'X-XSS-Protection "1; mode=block"',
+
     # vvoid clickjacking
     'X-Frame-Options SAMEORIGIN',
 
     # disable content-type sniffing
     'X-Content-Type-Options nosniff',
-
-    # XSS filter
-    'X-XSS-Protection "1; mode=block"',
   ],
 
 }
@@ -87,7 +91,8 @@ flags.push '--without-http_autoindex_module' unless node['nginx-hardening']['sou
 flags.push '--without-http_ssi_module'       unless node['nginx-hardening']['source']['http_ssi_module']
 
 default['nginx']['source']['default_configure_flags'] = flags
+
 default['nginx-hardening']['options']['ssl_protocols'] = 'TLSv1 TLSv1.1 TLSv1.2'
-default['nginx-hardening']['options']['ssl_ciphers'] = "'ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:DHE-DSS-AES128-GCM-SHA256:kEDH+AESGCM:ECDHE-RSA-AES128-SHA256:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA:ECDHE-ECDSA-AES256-SHA:DHE-RSA-AES128-SHA256:DHE-RSA-AES128-SHA:DHE-DSS-AES128-SHA256:DHE-RSA-AES256-SHA256:DHE-DSS-AES256-SHA:DHE-RSA-AES256-SHA:AES128-GCM-SHA256:AES256-GCM-SHA384:AES128-SHA256:AES256-SHA256:AES128-SHA:AES256-SHA:AES:CAMELLIA:DES-CBC3-SHA:!aNULL:!eNULL:!EXPORT:!DES:!RC4:!MD5:!PSK:!aECDH:!EDH-DSS-DES-CBC3-SHA:!EDH-RSA-DES-CBC3-SHA:!KRB5-DES-CBC3-SHA'"
+default['nginx-hardening']['options']['ssl_ciphers'] = "'ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:DHE-DSS-AES128-GCM-SHA256:kEDH+AESGCM:ECDHE-RSA-AES128-SHA256:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA:ECDHE-ECDSA-AES256-SHA:DHE-RSA-AES128-SHA256:DHE-RSA-AES128-SHA:DHE-DSS-AES128-SHA256:DHE-RSA-AES256-SHA256:DHE-DSS-AES256-SHA:DHE-RSA-AES256-SHA:AES128-GCM-SHA256:AES256-GCM-SHA384:AES128-SHA256:AES256-SHA256:AES128-SHA:AES256-SHA:AES:CAMELLIA:DES-CBC3-SHA:!aNULL:!eNULL:!EXPORT:!DES:!RC4:!MD5:!PSK:!aECDH:!EDH-DSS-DES-CBC3-SHA:!EDH-RSA-DES-CBC3-SHA:!KRB5-DES-CBC3-SHA@STRENGTH'"
 default['nginx-hardening']['options']['ssl_prefer_server_ciphers'] = 'on'
 default['nginx-hardening']['dh-size'] = 2048
