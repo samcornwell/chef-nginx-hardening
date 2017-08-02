@@ -96,6 +96,18 @@ directory '/var/log/nginx' do
   mode '750'
 end
 
+directory '/usr/share/nginx/html' do
+  owner  'nginx'
+  group  'nginx'
+  mode '1660'
+end
+
+directory '/var/local' do
+  owner  'nginx'
+  group  'nginx'
+  mode '1660'
+end
+
 cookbook_file '/etc/ssl/certs/rel3_dodroot_2048.pem' do
   source 'rel3_dodroot_2048.pem'
   owner 'root'
@@ -122,6 +134,14 @@ end
 
 cookbook_file '/etc/ssl/certs/dod-root-certs.pem' do
   source 'dod-root-certs.pem'
+  owner 'root'
+  group 'root'
+  mode '0660'
+  action :create
+end
+
+cookbook_file '/etc/ssl/certs/DOD.crl' do
+  source 'DOD.crl'
   owner 'root'
   group 'root'
   mode '0660'
