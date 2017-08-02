@@ -64,3 +64,74 @@ execute 'generate_dh_group' do
   command "openssl dhparam -out #{node['nginx-hardening']['options']['ssl_dhparam']} #{node['nginx-hardening']['dh-size']}"
   not_if { File.exist?(node['nginx-hardening']['options']['ssl_dhparam']) }
 end
+
+directory '/usr/sbin/nginx' do
+  owner  'root'
+  group  'root'
+  mode '550'
+end
+directory '/etc/nginx/' do
+  owner  'root'
+  group  'root'
+  mode '770'
+end
+directory '/etc/nginx/conf.d' do
+  owner  'root'
+  group  'root'
+  mode '770'
+end
+directory '/etc/nginx/modules' do
+  owner  'root'
+  group  'root'
+  mode '770'
+end
+directory '/usr/share/nginx/html' do
+  owner  'nginx'
+  group  'nginx'
+  mode '775'
+end
+directory '/var/log/nginx' do
+  owner  'root'
+  group  'root'
+  mode '750'
+end
+
+cookbook_file '/etc/ssl/certs/rel3_dodroot_2048.pem' do
+  source 'rel3_dodroot_2048.pem'
+  owner 'root'
+  group 'root'
+  mode '0660'
+  action :create
+end
+
+cookbook_file '/etc/ssl/certs/dodeca.pem' do
+  source 'dodeca.pem'
+  owner 'root'
+  group 'root'
+  mode '0660'
+  action :create
+end
+
+cookbook_file '/etc/ssl/certs/dodeca2.pem' do
+  source 'dodeca2.pem'
+  owner 'root'
+  group 'root'
+  mode '0660'
+  action :create
+end
+
+cookbook_file '/etc/ssl/certs/dod-root-certs.pem' do
+  source 'dod-root-certs.pem'
+  owner 'root'
+  group 'root'
+  mode '0660'
+  action :create
+end
+
+cookbook_file '/etc/nginx/sites-enabled/vserver1.conf' do
+  source 'vserver1.conf'
+  owner 'root'
+  group 'root'
+  mode '0660'
+  action :create
+end
