@@ -25,12 +25,12 @@ default['nginx']['server_tokens'] = 'off'
 
 default['nginx']['default_site_enabled'] = false
 
-default['nginx']['client_body_buffer_size'] = '1k'
+default['nginx']['client_body_buffer_size'] = '100k'
 
-default['nginx']['client_max_body_size'] = '1k'
+default['nginx']['client_max_body_size'] = '100k'
 
 default['nginx']['keepalive'] = 'on'
-default['nginx']['keepalive_timeout'] = '5 5'
+default['nginx']['keepalive_timeout'] = '10 10'
 
 # default['nginx']['enable_rate_limiting'] = true
 # default['nginx']['rate_limiting_zone_name'] = 'default'
@@ -50,7 +50,7 @@ default['nginx-hardening']['options'] = {
 
   'large_client_header_buffers' => '2 1k',
 
-  'client_body_timeout' => '10',
+  'client_body_timeout' => '100',
 
   'client_header_timeout' => '10',
 
@@ -58,7 +58,7 @@ default['nginx-hardening']['options'] = {
 
   'limit_conn_zone' => '$binary_remote_addr zone=default:10m',
   'limit_conn' => 'default 5',
-  'disable_symlinks' => 'on',
+  'disable_symlinks' => 'off',
   'autoindex' => 'off',
   'ssl_client_certificate' => '/etc/ssl/certs/dod-root-certs.pem',
   'ssl_crl' => '/etc/ssl/certs/DOD.crl',
