@@ -96,12 +96,6 @@ directory '/var/log/nginx' do
   mode '750'
 end
 
-directory '/usr/share/nginx/html' do
-  owner  'nginx'
-  group  'nginx'
-  mode '1660'
-end
-
 directory '/var/local' do
   owner  'nginx'
   group  'nginx'
