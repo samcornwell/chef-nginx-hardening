@@ -88,7 +88,7 @@ end
 directory '/usr/share/nginx/html' do
   owner  'nginx'
   group  'nginx'
-  mode '775'
+  mode '664'
 end
 directory '/var/log/nginx' do
   owner  'root'
