@@ -88,18 +88,12 @@ end
 directory '/usr/share/nginx/html' do
   owner  'nginx'
   group  'nginx'
-  mode '775'
+  mode '664'
 end
 directory '/var/log/nginx' do
   owner  'root'
   group  'root'
   mode '750'
-end
-
-directory '/usr/share/nginx/html' do
-  owner  'nginx'
-  group  'nginx'
-  mode '1660'
 end
 
 directory '/var/local' do

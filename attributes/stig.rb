@@ -24,7 +24,7 @@ include_attribute 'chef_nginx'
 # to be on par with the puppet module defaults
 
 #V-13727
-node.set['nginx']['worker_processes'] = 'auto'
+node.set['nginx']['worker_processes'] = '2'
 
 #V-13726
 node.set['nginx']['keepalive_timeout'] = '5 5'
