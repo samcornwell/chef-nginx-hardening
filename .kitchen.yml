@@ -11,7 +11,9 @@ provisioner:
 
 verifier:
   name: inspec
-  sudo: true
+  # sudo: true
+  # format: junit
+  # output: test.json
 
 platforms:
 - name: debian-7
@@ -99,4 +101,6 @@ suites:
   verifier:
     inspec_tests:
       # - git: https://github.com/aaronlippold/nginx-baseline.git
-      - path: nginx-baseline
+      # - path: nginx-baseline
+      - https://github.com/dev-sec/tests-nginx-hardening
+
