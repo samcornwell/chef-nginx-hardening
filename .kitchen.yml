@@ -12,6 +12,8 @@ provisioner:
 verifier:
   name: inspec
   sudo: true
+  format: json
+  output: inspec_results.json
 
 platforms:
 - name: debian-7
@@ -98,4 +100,4 @@ suites:
     - recipe[nginx-hardening]
   verifier:
     inspec_tests:
-      - https://github.com/dev-sec/tests-nginx-hardening
+      - nginx-baseline

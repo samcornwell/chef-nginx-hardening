@@ -21,3 +21,50 @@
 
 # nginx requires up to date openssl packages
 include_recipe 'openssl::upgrade'
+
+package 'nss-sysinit' do
+ action :upgrade
+end
+
+package 'chkconfig' do
+ action :upgrade
+end
+
+package 'dracut' do
+ action :upgrade
+end
+
+package 'device-mapper-libs' do
+ action :upgrade
+end
+
+package 'kpartx' do
+ action :upgrade
+end
+
+package 'gawk' do
+ action :upgrade
+end
+
+package 'bind-license' do
+ action :upgrade
+end
+package 'ca-certificates' do
+ action :upgrade
+end
+package 'device-mapper' do
+ action :upgrade
+end
+
+package 'glibc' do
+  action :upgrade
+end
+
+package 'glibc-common' do
+  action :upgrade
+end
+
+package 'audit' do
+  version '2.6.5-3.el7_3.1'
+  action :install
+end
