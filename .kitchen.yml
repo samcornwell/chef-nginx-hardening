@@ -100,7 +100,5 @@ suites:
     - recipe[nginx-hardening]
   verifier:
     inspec_tests:
-      # - git: https://github.com/aaronlippold/nginx-baseline.git
+      - git: https://github.com/aaronlippold/nginx-baseline.git
       # - path: nginx-baseline
-      - https://github.com/dev-sec/tests-nginx-hardening
-
