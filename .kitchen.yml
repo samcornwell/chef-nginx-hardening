@@ -1,6 +1,6 @@
 driver:
   name: dokken
-  chef_version: latest
+  chef_version: '13.3.42'
   privileged: true # because Docker and SystemD/Upstart
 
 transport:
@@ -12,8 +12,6 @@ provisioner:
 verifier:
   name: inspec
   sudo: true
-  # format: json
-  # output: inspec_results.json
 
 platforms:
 - name: debian-7
