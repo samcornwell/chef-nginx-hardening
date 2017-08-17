@@ -100,4 +100,4 @@ suites:
     - recipe[nginx-hardening]
   verifier:
     inspec_tests:
-      - nginx-baseline
+      - https://github.com/aaronlippold/nginx-baseline
