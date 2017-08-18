@@ -6,3 +6,4 @@ metadata
 cookbook 'apt'
 cookbook 'build-essential'
 cookbook 'yum-epel'
+cookbook 'zypper'

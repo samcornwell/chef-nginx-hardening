@@ -12,6 +12,8 @@ provisioner:
 verifier:
   name: inspec
   sudo: true
+  format: json
+  output: docs/inspec_results.json
 
 platforms:
 - name: debian-7
