@@ -65,6 +65,5 @@ package 'glibc-common' do
 end
 
 package 'audit' do
-  version '2.6.5-3.el7_3.1'
   action :install
 end
