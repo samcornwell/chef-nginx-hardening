@@ -12,6 +12,9 @@ provisioner:
 verifier:
   name: inspec
   sudo: true
+  # format: json
+  # output: docs/inspec_results.json
+
 
 platforms:
 - name: debian-7
@@ -45,6 +48,19 @@ platforms:
     pid_one_command: /usr/lib/systemd/systemd
     intermediate_instructions:
       - RUN yum -y install lsof which systemd-sysv initscripts
+
+- name: centos-7-aws
+  driver:
+    name: ec2
+    aws_ssh_key_id: tk_test
+    security_group_ids: ["sg-eb31359b"]
+    image_id:   ami-46c1b650
+    privileged: true
+  provisioner:
+    name: chef_solo
+  transport:
+    name: ssh
+    ssh_key: ~/.ssh/aws_cert.pem
 
 - name: fedora-latest
   driver:
