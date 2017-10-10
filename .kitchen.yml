@@ -52,7 +52,7 @@ platforms:
 - name: centos-7-aws
   driver:
     name: ec2
-    aws_ssh_key_id: tk_test
+    aws_ssh_key_id: aws_cert
     security_group_ids: ["sg-eb31359b"]
     image_id:   ami-46c1b650
     privileged: true
