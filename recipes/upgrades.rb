@@ -49,9 +49,11 @@ end
 package 'bind-license' do
  action :upgrade
 end
+
 package 'ca-certificates' do
  action :upgrade
 end
+
 package 'device-mapper' do
  action :upgrade
 end
@@ -61,6 +63,18 @@ package 'glibc' do
 end
 
 package 'glibc-common' do
+  action :upgrade
+end
+
+package 'tzdata' do
+  action :upgrade
+end
+
+package 'kmod' do
+  action :upgrade
+end
+
+package 'kmod-libs' do
   action :upgrade
 end
 
