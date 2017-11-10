@@ -22,60 +22,21 @@
 # nginx requires up to date openssl packages
 include_recipe 'openssl::upgrade'
 
-package 'nss-sysinit' do
- action :upgrade
+# OS-specific configuration
+if platform_family?('debian')
+  execute 'linux_patches' do
+    command 'apt-get dist-upgrade -y'
+  end
 end
 
-package 'chkconfig' do
- action :upgrade
+if platform_family?('rhel', 'fedora')
+  execute 'linux_patches' do
+    command 'yum update -y'
+  end
 end
 
-package 'dracut' do
- action :upgrade
-end
-
-package 'device-mapper-libs' do
- action :upgrade
-end
-
-package 'kpartx' do
- action :upgrade
-end
-
-package 'gawk' do
- action :upgrade
-end
-
-package 'bind-license' do
- action :upgrade
-end
-
-package 'ca-certificates' do
- action :upgrade
-end
-
-package 'device-mapper' do
- action :upgrade
-end
-
-package 'glibc' do
-  action :upgrade
-end
-
-package 'glibc-common' do
-  action :upgrade
-end
-
-package 'tzdata' do
-  action :upgrade
-end
-
-package 'kmod' do
-  action :upgrade
-end
-
-package 'kmod-libs' do
-  action :upgrade
+package 'telnet' do
+ action :purge
 end
 
 package 'audit' do

@@ -115,3 +115,5 @@ suites:
   verifier:
     inspec_tests:
       - git: https://github.com/aaronlippold/nginx-baseline.git
+    # attrs:
+      # - /Users/rxman/Documents/MITRE/INSPEC/nginx-baseline/aws-attributes.yml

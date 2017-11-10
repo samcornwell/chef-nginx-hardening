@@ -60,6 +60,10 @@ file '/etc/nginx/conf.d/default.conf' do
   notifies :restart, 'service[nginx]', :immediately
 end
 
+file '/usr/share/man/man8/nginx.8.gz' do
+  action :delete
+end
+
 execute 'generate_dh_group' do
   command "openssl dhparam -out #{node['nginx-hardening']['options']['ssl_dhparam']} #{node['nginx-hardening']['dh-size']}"
   not_if { File.exist?(node['nginx-hardening']['options']['ssl_dhparam']) }
