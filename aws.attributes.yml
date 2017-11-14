@@ -188,7 +188,8 @@ allowed_services_list: [ 'arp-ethers',
                          'tcsd',
                          'teamd@',
                          'tuned',
-                         'wpa_supplicant']
+                         'wpa_supplicant',
+                         'qemu-guest-agent']
 
 #description: List of disallowed services
 disallowed_services_list:
@@ -199,7 +200,7 @@ disallowed_services_list:
     ]
 
 # description: 'List of allowed packages',
-allowed_packages_list: 
+allowed_packages_list:
             ["tuned",
              "filesystem",
              "cloud-init",
@@ -550,7 +551,9 @@ allowed_packages_list:
              "dracut-network",
              "policycoreutils-python",
              "cronie",
-             "trousers"]
+             "trousers",
+             'qemu-guest-agent',
+             'libverto-libevent']
 
 
 # description: 'List of disallowed packages',
