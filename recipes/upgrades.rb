@@ -35,10 +35,16 @@ if platform_family?('rhel', 'fedora')
   end
 end
 
-package 'telnet' do
- action :purge
+node['include_packages'].each do |package|
+  package package do
+    action :install
+  end
 end
 
-package 'audit' do
-  action :install
+node['remove_packages'].each do |package|
+  package package do
+    action :purge
+  end
 end
+
+

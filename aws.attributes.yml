@@ -27,7 +27,7 @@ nginx_owner: 'nginx'
 nginx_group: 'nginx'
 
 #description: The system adminstrator,
-sys_admin: 'root'
+sys_admin: ['root','centos']
 
 #description: The system adminstrator group,
 sys_admin_group: 'root'
@@ -105,7 +105,6 @@ allowed_services_list: [ 'arp-ethers',
                          'nginx-debug',
                          'nginx',
                          'polkit',
-                         'postfix',
                          'quotaon',
                          'rc-local',
                          'rdisc',
@@ -195,7 +194,8 @@ allowed_services_list: [ 'arp-ethers',
 disallowed_services_list:
     ['mysql',
      'postgres',
-     'named'
+     'named',
+     'postfix'
     ]
 
 # description: 'List of allowed packages',
@@ -554,7 +554,7 @@ allowed_packages_list:
 
 
 # description: 'List of disallowed packages',
-disallowed_packages_list: []
+disallowed_packages_list: ['postfix']
 
 # description: List of disallowed compilers
 disallowed_compiler_list:

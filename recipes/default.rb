@@ -70,105 +70,79 @@ execute 'generate_dh_group' do
 end
 
 directory '/usr/sbin/nginx' do
-  owner  'root'
-  group  'root'
+  owner node['system_admin']
+  group node['system_admin']
   mode '550'
 end
+
 directory '/etc/nginx/' do
-  owner  'root'
-  group  'root'
+  owner node['system_admin']
+  group node['system_admin']
   mode '770'
 end
+
 directory '/etc/nginx/conf.d' do
-  owner  'root'
-  group  'root'
+  owner node['system_admin']
+  group node['system_admin']
   mode '770'
 end
+
 directory '/etc/nginx/modules' do
-  owner  'root'
-  group  'root'
+  owner node['system_admin']
+  group node['system_admin']
   mode '770'
 end
 directory '/usr/share/nginx/html' do
-  owner  'nginx'
-  group  'nginx'
+  owner node['nginx_owner']
+  group node['nginx_owner']
   mode '664'
 end
 directory '/var/log/nginx' do
-  owner  'root'
-  group  'root'
+  owner  node['system_admin']
+  group  node['system_admin']
   mode '750'
 end
 
 directory '/var/local' do
-  owner  'nginx'
-  group  'nginx'
+  owner  node['nginx_owner']
+  group  node['nginx_owner']
   mode '1660'
 end
 
-cookbook_file '/etc/ssl/certs/rel3_dodroot_2048.pem' do
-  source 'rel3_dodroot_2048.pem'
-  owner 'root'
-  group 'root'
-  mode '0660'
-  action :create
+node['cert_files'].each do |cert|
+  cookbook_file cert do
+    source File.basename(cert)
+    owner node['system_admin']
+    group node['system_admin']
+    mode '0660'
+    action :create
+  end
 end
 
-cookbook_file '/etc/ssl/certs/dodeca.pem' do
-  source 'dodeca.pem'
-  owner 'root'
-  group 'root'
-  mode '0660'
-  action :create
+node['virtual_servers'].each do |server|
+  cookbook_file server do
+    source File.basename(server)
+    owner node['nginx_owner']
+    group node['nginx_owner']
+    mode '0660'
+    action :create
+  end
 end
 
-cookbook_file '/etc/ssl/certs/dodeca2.pem' do
-  source 'dodeca2.pem'
-  owner 'root'
-  group 'root'
-  mode '0660'
-  action :create
+node['nginx_files'].each do |nginx_file|
+  file nginx_file do
+    owner  node['nginx_owner']
+    group  node['nginx_owner']
+    mode '0660'
+  end
 end
 
-cookbook_file '/etc/ssl/certs/dod-root-certs.pem' do
-  source 'dod-root-certs.pem'
-  owner 'root'
-  group 'root'
-  mode '0660'
-  action :create
-end
 
-cookbook_file '/etc/ssl/certs/DOD.crl' do
-  source 'DOD.crl'
-  owner 'root'
-  group 'root'
-  mode '0660'
-  action :create
-end
-
-cookbook_file '/etc/nginx/sites-enabled/vserver1.conf' do
-  source 'vserver1.conf'
-  owner 'root'
-  group 'root'
-  mode '0660'
-  action :create
-end
-
-directory '/usr/share/nginx/html/app1' do
-  owner 'nginx'
-  group 'nginx'
-  mode '1660'
-  action :create
-end
-directory '/usr/share/nginx/html/app2' do
-  owner 'nginx'
-  group 'nginx'
-  mode '1660'
-  action :create
-end
-directory '/usr/share/nginx/html/app3' do
-  owner 'nginx'
-  group 'nginx'
-  mode '1660'
-  action :create
+node['root_folders'].each do |folder|
+  directory folder do
+    owner node['nginx_owner']
+    group node['nginx_owner']
+    mode '1660'
+    action :create
+  end
 end
