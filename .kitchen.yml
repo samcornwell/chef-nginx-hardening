@@ -114,6 +114,6 @@ suites:
     - recipe[nginx-hardening]
   verifier:
     inspec_tests:
-      - /Users/rxman/Documents/MITRE/INSPEC/nginx-baseline
+      - git: https://github.com/aaronlippold/nginx-baseline.git
     # attrs:
     #   - aws.attributes.yml
