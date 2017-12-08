@@ -13,7 +13,7 @@ verifier:
   name: inspec
   sudo: true
   # format: json
-  # output: docs/inspec_results.json
+  # output: inspec_results.json
 
 
 platforms:
