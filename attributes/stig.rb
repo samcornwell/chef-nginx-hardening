@@ -38,7 +38,12 @@ default['nginx-hardening']['autoindex'] = 'off'
 default['system_admin'] = 'root'
 default['nginx_owner'] = 'nginx'
 
-default['include_packages'] = ['audit']
+if platform_family?('debian')
+    default['include_packages'] = ['auditd']
+end
+if platform_family?('rhel', 'fedora')
+    default['include_packages'] = ['audit']
+end
 default['remove_packages'] = ['postfix']
 
 default['virtual_servers'] = ['/etc/nginx/sites-enabled/vserver1.conf']
