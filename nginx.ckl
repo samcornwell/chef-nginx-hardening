@@ -80,12 +80,11 @@
           <ATTRIBUTE_DATA>Nginx Security Technical Implementation Guide :: Release: 1</ATTRIBUTE_DATA>
         </STIG_DATA>
         <STATUS>NotAFinding</STATUS>
-        <FINDING_DETAILS>All Automated tests passed for the control 
+        <FINDING_DETAILS>All Automated tests passed for the control
 
  PASS -- Linux Update should be uptodate
 </FINDING_DETAILS>
-        <COMMENTS>
-2017-12-08 17:47:41 -0500: Automated compliance tests brought to you by the MITRE corporation and the InSpec project.</COMMENTS>
+        <COMMENTS></COMMENTS>
         <SEVERITY_OVERRIDE/>
         <SEVERITY_JUSTIFICATION/>
       </VULN>
@@ -165,7 +164,7 @@
           <ATTRIBUTE_DATA>Nginx Security Technical Implementation Guide :: Release: 1</ATTRIBUTE_DATA>
         </STIG_DATA>
         <STATUS>NotAFinding</STATUS>
-        <FINDING_DETAILS>All Automated tests passed for the control 
+        <FINDING_DETAILS>All Automated tests passed for the control
 
  PASS -- [["/etc/ssl/certs/dod-root-certs.pem"]] should not be nil
 PASS -- x509_certificate /etc/ssl/certs/dod-root-certs.pem should not be nil
@@ -173,8 +172,7 @@ PASS -- x509_certificate /etc/ssl/certs/dod-root-certs.pem subject.C should cmp 
 PASS -- x509_certificate /etc/ssl/certs/dod-root-certs.pem subject.O should cmp == "U.S. Government"
 PASS -- DoD should be in "DoD" and "ECA"
 </FINDING_DETAILS>
-        <COMMENTS>
-2017-12-08 17:47:41 -0500: Automated compliance tests brought to you by the MITRE corporation and the InSpec project.</COMMENTS>
+        <COMMENTS></COMMENTS>
         <SEVERITY_OVERRIDE/>
         <SEVERITY_JUSTIFICATION/>
       </VULN>
@@ -246,12 +244,11 @@ PASS -- DoD should be in "DoD" and "ECA"
           <ATTRIBUTE_DATA>Nginx Security Technical Implementation Guide :: Release: 1</ATTRIBUTE_DATA>
         </STIG_DATA>
         <STATUS>NotAFinding</STATUS>
-        <FINDING_DETAILS>All Automated tests passed for the control 
+        <FINDING_DETAILS>All Automated tests passed for the control
 
  PASS -- File /usr/share/man/man8/nginx.8.gz should not exist
 </FINDING_DETAILS>
-        <COMMENTS>
-2017-12-08 17:47:41 -0500: Automated compliance tests brought to you by the MITRE corporation and the InSpec project.</COMMENTS>
+        <COMMENTS></COMMENTS>
         <SEVERITY_OVERRIDE/>
         <SEVERITY_JUSTIFICATION/>
       </VULN>
@@ -327,14 +324,13 @@ PASS -- DoD should be in "DoD" and "ECA"
           <ATTRIBUTE_DATA>Nginx Security Technical Implementation Guide :: Release: 1</ATTRIBUTE_DATA>
         </STIG_DATA>
         <STATUS>NotAFinding</STATUS>
-        <FINDING_DETAILS>All Automated tests passed for the control 
+        <FINDING_DETAILS>All Automated tests passed for the control
 
  PASS -- [["/etc/ssl/certs/DOD.crl"]] should not be nil
 PASS -- File /etc/ssl/certs/DOD.crl should be file
 PASS -- 7.718162037037037e-05 should cmp &lt; 7
 </FINDING_DETAILS>
-        <COMMENTS>
-2017-12-08 17:47:41 -0500: Automated compliance tests brought to you by the MITRE corporation and the InSpec project.</COMMENTS>
+        <COMMENTS></COMMENTS>
         <SEVERITY_OVERRIDE/>
         <SEVERITY_JUSTIFICATION/>
       </VULN>
@@ -412,15 +408,14 @@ PASS -- 7.718162037037037e-05 should cmp &lt; 7
           <ATTRIBUTE_DATA>Nginx Security Technical Implementation Guide :: Release: 1</ATTRIBUTE_DATA>
         </STIG_DATA>
         <STATUS>NotAFinding</STATUS>
-        <FINDING_DETAILS>All Automated tests passed for the control 
+        <FINDING_DETAILS>All Automated tests passed for the control
 
  PASS -- [["10"]] should not be nil
 PASS -- ["10"] should cmp &lt;= 10
 PASS -- [["10"]] should not be nil
 PASS -- ["10"] should cmp &lt;= 10
 </FINDING_DETAILS>
-        <COMMENTS>
-2017-12-08 17:47:41 -0500: Automated compliance tests brought to you by the MITRE corporation and the InSpec project.</COMMENTS>
+        <COMMENTS></COMMENTS>
         <SEVERITY_OVERRIDE/>
         <SEVERITY_JUSTIFICATION/>
       </VULN>
@@ -493,12 +488,11 @@ PASS -- ["10"] should cmp &lt;= 10
           <ATTRIBUTE_DATA>Nginx Security Technical Implementation Guide :: Release: 1</ATTRIBUTE_DATA>
         </STIG_DATA>
         <STATUS>NotAFinding</STATUS>
-        <FINDING_DETAILS>All Automated tests passed for the control 
+        <FINDING_DETAILS>All Automated tests passed for the control
 
  PASS -- [["5", "5"]] should cmp == [["5", "5"]]
 </FINDING_DETAILS>
-        <COMMENTS>
-2017-12-08 17:47:41 -0500: Automated compliance tests brought to you by the MITRE corporation and the InSpec project.</COMMENTS>
+        <COMMENTS></COMMENTS>
         <SEVERITY_OVERRIDE/>
         <SEVERITY_JUSTIFICATION/>
       </VULN>
@@ -569,12 +563,11 @@ PASS -- ["10"] should cmp &lt;= 10
           <ATTRIBUTE_DATA>Nginx Security Technical Implementation Guide :: Release: 1</ATTRIBUTE_DATA>
         </STIG_DATA>
         <STATUS>NotAFinding</STATUS>
-        <FINDING_DETAILS>All Automated tests passed for the control 
+        <FINDING_DETAILS>All Automated tests passed for the control
 
  PASS -- [["auto"]] should cmp == [["auto"]]
 </FINDING_DETAILS>
-        <COMMENTS>
-2017-12-08 17:47:41 -0500: Automated compliance tests brought to you by the MITRE corporation and the InSpec project.</COMMENTS>
+        <COMMENTS></COMMENTS>
         <SEVERITY_OVERRIDE/>
         <SEVERITY_JUSTIFICATION/>
       </VULN>
@@ -643,12 +636,11 @@ PASS -- ["10"] should cmp &lt;= 10
           <ATTRIBUTE_DATA>Nginx Security Technical Implementation Guide :: Release: 1</ATTRIBUTE_DATA>
         </STIG_DATA>
         <STATUS>NotAFinding</STATUS>
-        <FINDING_DETAILS>All Automated tests passed for the control 
+        <FINDING_DETAILS>All Automated tests passed for the control
 
  PASS -- [["on"]] should cmp == [["on"]]
 </FINDING_DETAILS>
-        <COMMENTS>
-2017-12-08 17:47:41 -0500: Automated compliance tests brought to you by the MITRE corporation and the InSpec project.</COMMENTS>
+        <COMMENTS></COMMENTS>
         <SEVERITY_OVERRIDE/>
         <SEVERITY_JUSTIFICATION/>
       </VULN>
@@ -723,13 +715,12 @@ PASS -- ["10"] should cmp &lt;= 10
           <ATTRIBUTE_DATA>Nginx Security Technical Implementation Guide :: Release: 1</ATTRIBUTE_DATA>
         </STIG_DATA>
         <STATUS>NotAFinding</STATUS>
-        <FINDING_DETAILS>All Automated tests passed for the control 
+        <FINDING_DETAILS>All Automated tests passed for the control
 
  PASS -- [["off"]] should cmp == [["off"]]
 PASS -- [["off"]] should cmp == [["off"]]
 </FINDING_DETAILS>
-        <COMMENTS>
-2017-12-08 17:47:41 -0500: Automated compliance tests brought to you by the MITRE corporation and the InSpec project.</COMMENTS>
+        <COMMENTS></COMMENTS>
         <SEVERITY_OVERRIDE/>
         <SEVERITY_JUSTIFICATION/>
       </VULN>
@@ -795,15 +786,14 @@ PASS -- [["off"]] should cmp == [["off"]]
           <ATTRIBUTE_DATA>Nginx Security Technical Implementation Guide :: Release: 1</ATTRIBUTE_DATA>
         </STIG_DATA>
         <STATUS>NotAFinding</STATUS>
-        <FINDING_DETAILS>All Automated tests passed for the control 
+        <FINDING_DETAILS>All Automated tests passed for the control
 
  PASS -- [["1k"]] should not be nil
 PASS -- 1 should cmp &lt;= 100
 PASS -- [["1k"]] should not be nil
 PASS -- 1 should cmp &lt;= 100
 </FINDING_DETAILS>
-        <COMMENTS>
-2017-12-08 17:47:41 -0500: Automated compliance tests brought to you by the MITRE corporation and the InSpec project.</COMMENTS>
+        <COMMENTS></COMMENTS>
         <SEVERITY_OVERRIDE/>
         <SEVERITY_JUSTIFICATION/>
       </VULN>
@@ -866,12 +856,11 @@ PASS -- 1 should cmp &lt;= 100
           <ATTRIBUTE_DATA>Nginx Security Technical Implementation Guide :: Release: 1</ATTRIBUTE_DATA>
         </STIG_DATA>
         <STATUS>NotAFinding</STATUS>
-        <FINDING_DETAILS>All Automated tests passed for the control 
+        <FINDING_DETAILS>All Automated tests passed for the control
 
  PASS -- [["2", "1k"]] should cmp == [["2", "1k"]]
 </FINDING_DETAILS>
-        <COMMENTS>
-2017-12-08 17:47:41 -0500: Automated compliance tests brought to you by the MITRE corporation and the InSpec project.</COMMENTS>
+        <COMMENTS></COMMENTS>
         <SEVERITY_OVERRIDE/>
         <SEVERITY_JUSTIFICATION/>
       </VULN>
@@ -934,13 +923,12 @@ PASS -- 1 should cmp &lt;= 100
           <ATTRIBUTE_DATA>Nginx Security Technical Implementation Guide :: Release: 1</ATTRIBUTE_DATA>
         </STIG_DATA>
         <STATUS>NotAFinding</STATUS>
-        <FINDING_DETAILS>All Automated tests passed for the control 
+        <FINDING_DETAILS>All Automated tests passed for the control
 
  PASS -- [["1k"]] should not be nil
 PASS -- 1 should cmp &lt;= 1
 </FINDING_DETAILS>
-        <COMMENTS>
-2017-12-08 17:47:41 -0500: Automated compliance tests brought to you by the MITRE corporation and the InSpec project.</COMMENTS>
+        <COMMENTS></COMMENTS>
         <SEVERITY_OVERRIDE/>
         <SEVERITY_JUSTIFICATION/>
       </VULN>
@@ -1015,7 +1003,7 @@ PASS -- 1 should cmp &lt;= 1
           <ATTRIBUTE_DATA>Nginx Security Technical Implementation Guide :: Release: 1</ATTRIBUTE_DATA>
         </STIG_DATA>
         <STATUS>NotAFinding</STATUS>
-        <FINDING_DETAILS>All Automated tests passed for the control 
+        <FINDING_DETAILS>All Automated tests passed for the control
 
  PASS -- [] should be empty
 PASS -- [] should be empty
@@ -1046,8 +1034,7 @@ PASS -- [] should be empty
 PASS -- [] should be empty
 PASS -- [] should be empty
 </FINDING_DETAILS>
-        <COMMENTS>
-2017-12-08 17:47:41 -0500: Automated compliance tests brought to you by the MITRE corporation and the InSpec project.</COMMENTS>
+        <COMMENTS></COMMENTS>
         <SEVERITY_OVERRIDE/>
         <SEVERITY_JUSTIFICATION/>
       </VULN>
@@ -1117,12 +1104,11 @@ PASS -- [] should be empty
           <ATTRIBUTE_DATA>Nginx Security Technical Implementation Guide :: Release: 1</ATTRIBUTE_DATA>
         </STIG_DATA>
         <STATUS>NotAFinding</STATUS>
-        <FINDING_DETAILS>All Automated tests passed for the control 
+        <FINDING_DETAILS>All Automated tests passed for the control
 
  PASS -- ["x"] should not cmp == [""]
 </FINDING_DETAILS>
-        <COMMENTS>
-2017-12-08 17:47:41 -0500: Automated compliance tests brought to you by the MITRE corporation and the InSpec project.</COMMENTS>
+        <COMMENTS></COMMENTS>
         <SEVERITY_OVERRIDE/>
         <SEVERITY_JUSTIFICATION/>
       </VULN>
@@ -1193,10 +1179,9 @@ PASS -- [] should be empty
           <ATTRIBUTE_DATA>Nginx Security Technical Implementation Guide :: Release: 1</ATTRIBUTE_DATA>
         </STIG_DATA>
         <STATUS>Not_Applicable</STATUS>
-        <FINDING_DETAILS>Justification: 
+        <FINDING_DETAILS>Justification:
  It is important to segregate public web server resources from private resources located behind the DoD DMZ in order to protect private assets. When folders, drives or other resources are directly shared between the public web server and private servers the intent of data and resource segregation can be compromised. In addition to the requirements of the DoD Internet-NIPRNet DMZ STIG that isolates inbound traffic from the external network to the internal network, resources such as printers, files, and folders/directories will not be shared between public web servers and assets located within the internal network.</FINDING_DETAILS>
-        <COMMENTS>
-2017-12-08 17:47:41 -0500: Automated compliance tests brought to you by the MITRE corporation and the InSpec project.</COMMENTS>
+        <COMMENTS></COMMENTS>
         <SEVERITY_OVERRIDE/>
         <SEVERITY_JUSTIFICATION/>
       </VULN>
@@ -1260,7 +1245,7 @@ PASS -- [] should be empty
           <ATTRIBUTE_DATA>Nginx Security Technical Implementation Guide :: Release: 1</ATTRIBUTE_DATA>
         </STIG_DATA>
         <STATUS>NotAFinding</STATUS>
-        <FINDING_DETAILS>All Automated tests passed for the control 
+        <FINDING_DETAILS>All Automated tests passed for the control
 
  PASS -- System Package maven-compiler-plugin.noarch should not be installed
 PASS -- System Package maven-compiler-plugin-javadoc.noarch should not be installed
@@ -1345,8 +1330,7 @@ PASS -- System Package vala-devel.i686 should not be installed
 PASS -- System Package vala-devel.x86_64 should not be installed
 PASS -- System Package ws-jaxme.noarch should not be installed
 </FINDING_DETAILS>
-        <COMMENTS>
-2017-12-08 17:47:41 -0500: Automated compliance tests brought to you by the MITRE corporation and the InSpec project.</COMMENTS>
+        <COMMENTS></COMMENTS>
         <SEVERITY_OVERRIDE/>
         <SEVERITY_JUSTIFICATION/>
       </VULN>
@@ -1414,11 +1398,10 @@ PASS -- System Package ws-jaxme.noarch should not be installed
           <ATTRIBUTE_DATA>Nginx Security Technical Implementation Guide :: Release: 1</ATTRIBUTE_DATA>
         </STIG_DATA>
         <STATUS>Not_Reviewed</STATUS>
-        <FINDING_DETAILS>Automated test skipped due to known accepted condition in the control : 
+        <FINDING_DETAILS>Automated test skipped due to known accepted condition in the control :
 
 Skipped control due to only_if condition.</FINDING_DETAILS>
-        <COMMENTS>
-2017-12-08 17:47:41 -0500: Automated compliance tests brought to you by the MITRE corporation and the InSpec project.</COMMENTS>
+        <COMMENTS></COMMENTS>
         <SEVERITY_OVERRIDE/>
         <SEVERITY_JUSTIFICATION/>
       </VULN>
@@ -1480,13 +1463,12 @@ Skipped control due to only_if condition.</FINDING_DETAILS>
           <ATTRIBUTE_DATA>Nginx Security Technical Implementation Guide :: Release: 1</ATTRIBUTE_DATA>
         </STIG_DATA>
         <STATUS>NotAFinding</STATUS>
-        <FINDING_DETAILS>All Automated tests passed for the control 
+        <FINDING_DETAILS>All Automated tests passed for the control
 
  PASS -- localhost:80 should match /[0-9]+(?:\.[0-9]+){3}|[a-zA-Z]:[0-9]+/
 PASS -- false should equal false
 </FINDING_DETAILS>
-        <COMMENTS>
-2017-12-08 17:47:41 -0500: Automated compliance tests brought to you by the MITRE corporation and the InSpec project.</COMMENTS>
+        <COMMENTS></COMMENTS>
         <SEVERITY_OVERRIDE/>
         <SEVERITY_JUSTIFICATION/>
       </VULN>
@@ -1554,12 +1536,11 @@ PASS -- false should equal false
           <ATTRIBUTE_DATA>Nginx Security Technical Implementation Guide :: Release: 1</ATTRIBUTE_DATA>
         </STIG_DATA>
         <STATUS>NotAFinding</STATUS>
-        <FINDING_DETAILS>All Automated tests passed for the control 
+        <FINDING_DETAILS>All Automated tests passed for the control
 
  PASS -- Nginx Environment version should cmp &gt;= "1.12.0"
 </FINDING_DETAILS>
-        <COMMENTS>
-2017-12-08 17:47:41 -0500: Automated compliance tests brought to you by the MITRE corporation and the InSpec project.</COMMENTS>
+        <COMMENTS></COMMENTS>
         <SEVERITY_OVERRIDE/>
         <SEVERITY_JUSTIFICATION/>
       </VULN>
@@ -1632,12 +1613,11 @@ PASS -- false should equal false
           <ATTRIBUTE_DATA>Nginx Security Technical Implementation Guide :: Release: 1</ATTRIBUTE_DATA>
         </STIG_DATA>
         <STATUS>NotAFinding</STATUS>
-        <FINDING_DETAILS>All Automated tests passed for the control 
+        <FINDING_DETAILS>All Automated tests passed for the control
 
  PASS -- ["root"] should be in "root" and "nginx"
 </FINDING_DETAILS>
-        <COMMENTS>
-2017-12-08 17:47:41 -0500: Automated compliance tests brought to you by the MITRE corporation and the InSpec project.</COMMENTS>
+        <COMMENTS></COMMENTS>
         <SEVERITY_OVERRIDE/>
         <SEVERITY_JUSTIFICATION/>
       </VULN>
@@ -1713,7 +1693,7 @@ PASS -- false should equal false
           <ATTRIBUTE_DATA>Nginx Security Technical Implementation Guide :: Release: 1</ATTRIBUTE_DATA>
         </STIG_DATA>
         <STATUS>NotAFinding</STATUS>
-        <FINDING_DETAILS>All Automated tests passed for the control 
+        <FINDING_DETAILS>All Automated tests passed for the control
 
  PASS -- File /etc/nginx/nginx.conf owner should be in "root" and "nginx"
 PASS -- File /etc/nginx/nginx.conf group should be in "root" and "nginx"
@@ -1728,8 +1708,7 @@ PASS -- File /etc/nginx/sites-enabled/vserver1.conf owner should be in "root" an
 PASS -- File /etc/nginx/sites-enabled/vserver1.conf group should be in "root" and "nginx"
 PASS -- File /etc/nginx/sites-enabled/vserver1.conf mode should cmp &lt;= 432
 </FINDING_DETAILS>
-        <COMMENTS>
-2017-12-08 17:47:41 -0500: Automated compliance tests brought to you by the MITRE corporation and the InSpec project.</COMMENTS>
+        <COMMENTS></COMMENTS>
         <SEVERITY_OVERRIDE/>
         <SEVERITY_JUSTIFICATION/>
       </VULN>
@@ -1807,15 +1786,14 @@ PASS -- File /etc/nginx/sites-enabled/vserver1.conf mode should cmp &lt;= 432
           <ATTRIBUTE_DATA>Nginx Security Technical Implementation Guide :: Release: 1</ATTRIBUTE_DATA>
         </STIG_DATA>
         <STATUS>NotAFinding</STATUS>
-        <FINDING_DETAILS>All Automated tests passed for the control 
+        <FINDING_DETAILS>All Automated tests passed for the control
 
  PASS -- ["auditd", "autovt@", "blk-availability", "brandbot", "console-getty", "console-shell", "container-getty@", "dbus-org.freedesktop.hostname1", "dbus-org.freedesktop.import1", "dbus-org.freedesktop.locale1", "dbus-org.freedesktop.login1", "dbus-org.freedesktop.machine1", "dbus-org.freedesktop.timedate1", "dbus", "debug-shell", "dracut-cmdline", "dracut-initqueue", "dracut-mount", "dracut-pre-mount", "dracut-pre-pivot", "dracut-pre-trigger", "dracut-pre-udev", "dracut-shutdown", "emergency", "fstrim", "getty@", "halt-local", "initrd-cleanup", "initrd-parse-etc", "initrd-switch-root", "initrd-udevadm-cleanup-db", "kmod-static-nodes", "messagebus", "nginx-debug", "nginx", "quotaon", "rc-local", "rdisc", "rescue", "rhel-autorelabel-mark", "rhel-autorelabel", "rhel-configure", "rhel-dmesg", "rhel-domainname", "rhel-import-state", "rhel-loadmodules", "rhel-readonly", "serial-getty@", "systemd-ask-password-console", "systemd-ask-password-wall", "systemd-backlight@", "systemd-binfmt", "systemd-bootchart", "systemd-firstboot", "systemd-fsck-root", "systemd-fsck@", "systemd-halt", "systemd-hibernate-resume@", "systemd-hibernate", "systemd-hostnamed", "systemd-hwdb-update", "systemd-hybrid-sleep", "systemd-importd", "systemd-initctl", "systemd-journal-catalog-update", "systemd-journal-flush", "systemd-journald", "systemd-kexec", "systemd-localed", "systemd-logind", "systemd-machine-id-commit", "systemd-machined", "systemd-modules-load", "systemd-nspawn@", "systemd-poweroff", "systemd-quotacheck", "systemd-random-seed", "systemd-readahead-collect", "systemd-readahead-done", "systemd-readahead-drop", "systemd-readahead-replay", "systemd-reboot", "systemd-remount-fs", "systemd-rfkill@", "systemd-shutdownd", "systemd-suspend", "systemd-sysctl", "systemd-timedated", "systemd-tmpfiles-clean", "systemd-tmpfiles-setup-dev", "systemd-tmpfiles-setup", "systemd-udev-settle", "systemd-udev-trigger", "systemd-udevd", "systemd-update-done", "systemd-update-utmp-runlevel", "systemd-update-utmp", "systemd-user-sessions", "systemd-vconsole-setup"] should be in "auditd", "autovt@", "blk-availability", "brandbot", "console-getty", "console-shell", "container-getty@", "dbus-org.freedesktop.hostname1", "dbus-org.freedesktop.import1", "dbus-org.freedesktop.locale1", "dbus-org.freedesktop.login1", "dbus-org.freedesktop.machine1", "dbus-org.freedesktop.timedate1", "dbus", "debug-shell", "dracut-cmdline", "dracut-initqueue", "dracut-mount", "dracut-pre-mount", "dracut-pre-pivot", "dracut-pre-trigger", "dracut-pre-udev", "dracut-shutdown", "emergency", "fstrim", "getty@", "halt-local", "initrd-cleanup", "initrd-parse-etc", "initrd-switch-root", "initrd-udevadm-cleanup-db", "kmod-static-nodes", "messagebus", "nginx-debug", "nginx", "qemu-guest-agent", "quotaon", "rc-local", "rdisc", "rescue", "rhel-autorelabel-mark", "rhel-autorelabel", "rhel-configure", "rhel-dmesg", "rhel-domainname", "rhel-import-state", "rhel-loadmodules", "rhel-readonly", "serial-getty@", "systemd-ask-password-console", "systemd-ask-password-wall", "systemd-backlight@", "systemd-binfmt", "systemd-bootchart", "systemd-firstboot", "systemd-fsck-root", "systemd-fsck@", "systemd-halt", "systemd-hibernate-resume@", "systemd-hibernate", "systemd-hostnamed", "systemd-hwdb-update", "systemd-hybrid-sleep", "systemd-importd", "systemd-initctl", "systemd-journal-catalog-update", "systemd-journal-flush", "systemd-journald", "systemd-kexec", "systemd-localed", "systemd-logind", "systemd-machine-id-commit", "systemd-machined", "systemd-modules-load", "systemd-nspawn@", "systemd-poweroff", "systemd-quotacheck", "systemd-random-seed", "systemd-readahead-collect", "systemd-readahead-done", "systemd-readahead-drop", "systemd-readahead-replay", "systemd-reboot", "systemd-remount-fs", "systemd-rfkill@", "systemd-shutdownd", "systemd-suspend", "systemd-sysctl", "systemd-timedated", "systemd-tmpfiles-clean", "systemd-tmpfiles-setup-dev", "systemd-tmpfiles-setup", "systemd-udev-settle", "systemd-udev-trigger", "systemd-udevd", "systemd-update-done", "systemd-update-utmp-runlevel", "systemd-update-utmp", "systemd-user-sessions", and "systemd-vconsole-setup"
 PASS -- ["auditd", "autovt@", "blk-availability", "brandbot", "console-getty", "console-shell", "container-getty@", "dbus-org.freedesktop.hostname1", "dbus-org.freedesktop.import1", "dbus-org.freedesktop.locale1", "dbus-org.freedesktop.login1", "dbus-org.freedesktop.machine1", "dbus-org.freedesktop.timedate1", "dbus", "debug-shell", "dracut-cmdline", "dracut-initqueue", "dracut-mount", "dracut-pre-mount", "dracut-pre-pivot", "dracut-pre-trigger", "dracut-pre-udev", "dracut-shutdown", "emergency", "fstrim", "getty@", "halt-local", "initrd-cleanup", "initrd-parse-etc", "initrd-switch-root", "initrd-udevadm-cleanup-db", "kmod-static-nodes", "messagebus", "nginx-debug", "nginx", "quotaon", "rc-local", "rdisc", "rescue", "rhel-autorelabel-mark", "rhel-autorelabel", "rhel-configure", "rhel-dmesg", "rhel-domainname", "rhel-import-state", "rhel-loadmodules", "rhel-readonly", "serial-getty@", "systemd-ask-password-console", "systemd-ask-password-wall", "systemd-backlight@", "systemd-binfmt", "systemd-bootchart", "systemd-firstboot", "systemd-fsck-root", "systemd-fsck@", "systemd-halt", "systemd-hibernate-resume@", "systemd-hibernate", "systemd-hostnamed", "systemd-hwdb-update", "systemd-hybrid-sleep", "systemd-importd", "systemd-initctl", "systemd-journal-catalog-update", "systemd-journal-flush", "systemd-journald", "systemd-kexec", "systemd-localed", "systemd-logind", "systemd-machine-id-commit", "systemd-machined", "systemd-modules-load", "systemd-nspawn@", "systemd-poweroff", "systemd-quotacheck", "systemd-random-seed", "systemd-readahead-collect", "systemd-readahead-done", "systemd-readahead-drop", "systemd-readahead-replay", "systemd-reboot", "systemd-remount-fs", "systemd-rfkill@", "systemd-shutdownd", "systemd-suspend", "systemd-sysctl", "systemd-timedated", "systemd-tmpfiles-clean", "systemd-tmpfiles-setup-dev", "systemd-tmpfiles-setup", "systemd-udev-settle", "systemd-udev-trigger", "systemd-udevd", "systemd-update-done", "systemd-update-utmp-runlevel", "systemd-update-utmp", "systemd-user-sessions", "systemd-vconsole-setup"] should not be in "mysql", "postgres", and "named"
 PASS -- Packages /.*/ names should be in "centos-release", "filesystem", "basesystem", "nss-softokn-freebl", "glibc", "libstdc++", "bash", "pcre", "zlib", "xz-libs", "libcom_err", "popt", "sed", "elfutils-libelf", "libffi", "libattr", "libacl", "libuuid", "readline", "gawk", "libcap-ng", "sqlite", "findutils", "expat", "nss-softokn", "p11-kit", "file-libs", "hostname", "tar", "pinentry", "libdb-utils", "libss", "elfutils-default-yama-scope", "ncurses", "gmp", "libsemanage", "libtasn1", "ca-certificates", "openssl-libs", "libblkid", "libmount", "shared-mime-info", "cracklib", "libpwquality", "pkgconfig", "dbus-glib", "binutils", "curl", "rpm", "libuser", "hardlink", "qrencode-libs", "device-mapper", "cryptsetup-libs", "dbus", "gdbm", "python", "dbus-python", "pyliblzma", "yum-metadata-parser", "python-urlgrabber", "pyxattr", "python-kitchen", "gnupg2", "pygpgme", "rpm-python", "yum", "yum-plugin-ovl", "passwd", "vim-minimal", "gpg-pubkey", "libmnl", "iptables", "sysvinit-tools", "systemd", "initscripts", "which", "nss-sysinit", "kmod", "kmod-libs", "openssl", "audit", "nginx", "libgcc", "setup", "bind-license", "ncurses-base", "glibc-common", "nspr", "ncurses-libs", "libsepol", "libselinux", "info", "bzip2-libs", "libdb", "chkconfig", "nss-util", "libxml2", "libgpg-error", "libcap", "grep", "libgcrypt", "lua", "cpio", "audit-libs", "libidn", "diffutils", "dbus-libs", "libassuan", "xz", "keyutils-libs", "acl", "cyrus-sasl-lib", "elfutils-libs", "ustr", "libverto", "p11-kit-trust", "coreutils", "krb5-libs", "shadow-utils", "glib2", "gzip", "cracklib-dicts", "pam", "procps-ng", "gobject-introspection", "libutempter", "libssh2", "nss-pem", "libcurl", "rpm-libs", "openldap", "util-linux", "kpartx", "device-mapper-libs", "dracut", "iputils", "python-libs", "python-iniparse", "python-pycurl", "python-gobject-base", "libxml2-python", "python-chardet", "pth", "gpgme", "rpm-build-libs", "yum-plugin-fastestmirror", "yum-utils", "qemu-guest-agent", "rootfiles", "libnfnetlink", "libnetfilter_conntrack", "iproute", "systemd-libs", "systemd-sysv", "lsof", "nss", "nss-tools", "tzdata", "make", "tcp_wrappers-libs", and "gpg-pubkey"
 PASS -- Packages /.*/ names should not be in
 </FINDING_DETAILS>
-        <COMMENTS>
-2017-12-08 17:47:41 -0500: Automated compliance tests brought to you by the MITRE corporation and the InSpec project.</COMMENTS>
+        <COMMENTS></COMMENTS>
         <SEVERITY_OVERRIDE/>
         <SEVERITY_JUSTIFICATION/>
       </VULN>
@@ -1884,8 +1862,7 @@ PASS -- Packages /.*/ names should not be in
         </STIG_DATA>
         <STATUS>Not_Tested</STATUS>
         <FINDING_DETAILS>No test available for this control</FINDING_DETAILS>
-        <COMMENTS>
-2017-12-08 17:47:41 -0500: Automated compliance tests brought to you by the MITRE corporation and the InSpec project.</COMMENTS>
+        <COMMENTS></COMMENTS>
         <SEVERITY_OVERRIDE/>
         <SEVERITY_JUSTIFICATION/>
       </VULN>
@@ -1964,7 +1941,7 @@ PASS -- Packages /.*/ names should not be in
           <ATTRIBUTE_DATA>Nginx Security Technical Implementation Guide :: Release: 1</ATTRIBUTE_DATA>
         </STIG_DATA>
         <STATUS>NotAFinding</STATUS>
-        <FINDING_DETAILS>All Automated tests passed for the control 
+        <FINDING_DETAILS>All Automated tests passed for the control
 
  PASS -- File /etc/nginx/nginx.conf owner should be in "root" and "nginx"
 PASS -- File /etc/nginx/nginx.conf group should be in "root" and "nginx"
@@ -1985,8 +1962,7 @@ PASS -- File /usr/share/nginx/html/app2 owner should be in "root" and "nginx"
 PASS -- File /usr/share/nginx/html/app2 group should be in "root" and "nginx"
 PASS -- File /usr/share/nginx/html/app2 sticky should equal true
 </FINDING_DETAILS>
-        <COMMENTS>
-2017-12-08 17:47:41 -0500: Automated compliance tests brought to you by the MITRE corporation and the InSpec project.</COMMENTS>
+        <COMMENTS></COMMENTS>
         <SEVERITY_OVERRIDE/>
         <SEVERITY_JUSTIFICATION/>
       </VULN>
@@ -2056,12 +2032,11 @@ PASS -- File /usr/share/nginx/html/app2 sticky should equal true
           <ATTRIBUTE_DATA>Nginx Security Technical Implementation Guide :: Release: 1</ATTRIBUTE_DATA>
         </STIG_DATA>
         <STATUS>NotAFinding</STATUS>
-        <FINDING_DETAILS>All Automated tests passed for the control 
+        <FINDING_DETAILS>All Automated tests passed for the control
 
  PASS -- ["nginx"] should be in "root" and "nginx"
 </FINDING_DETAILS>
-        <COMMENTS>
-2017-12-08 17:47:41 -0500: Automated compliance tests brought to you by the MITRE corporation and the InSpec project.</COMMENTS>
+        <COMMENTS></COMMENTS>
         <SEVERITY_OVERRIDE/>
         <SEVERITY_JUSTIFICATION/>
       </VULN>
@@ -2146,7 +2121,7 @@ PASS -- File /usr/share/nginx/html/app2 sticky should equal true
           <ATTRIBUTE_DATA>Nginx Security Technical Implementation Guide :: Release: 1</ATTRIBUTE_DATA>
         </STIG_DATA>
         <STATUS>NotAFinding</STATUS>
-        <FINDING_DETAILS>All Automated tests passed for the control 
+        <FINDING_DETAILS>All Automated tests passed for the control
 
  PASS -- File /usr/sbin/nginx owner should be in "root" and "nginx"
 PASS -- File /usr/sbin/nginx group should be in "root" and "nginx"
@@ -2170,8 +2145,7 @@ PASS -- File /var/log/nginx owner should be in "root" and "nginx"
 PASS -- File /var/log/nginx group should be in "root" and "nginx"
 PASS -- File /var/log/nginx mode should cmp &lt;= 750
 </FINDING_DETAILS>
-        <COMMENTS>
-2017-12-08 17:47:41 -0500: Automated compliance tests brought to you by the MITRE corporation and the InSpec project.</COMMENTS>
+        <COMMENTS></COMMENTS>
         <SEVERITY_OVERRIDE/>
         <SEVERITY_JUSTIFICATION/>
       </VULN>
@@ -2233,13 +2207,12 @@ PASS -- File /var/log/nginx mode should cmp &lt;= 750
           <ATTRIBUTE_DATA>Nginx Security Technical Implementation Guide :: Release: 1</ATTRIBUTE_DATA>
         </STIG_DATA>
         <STATUS>NotAFinding</STATUS>
-        <FINDING_DETAILS>All Automated tests passed for the control 
+        <FINDING_DETAILS>All Automated tests passed for the control
 
  PASS -- Port 25 should not be listening
 PASS -- System Package postfix should not be installed
 </FINDING_DETAILS>
-        <COMMENTS>
-2017-12-08 17:47:41 -0500: Automated compliance tests brought to you by the MITRE corporation and the InSpec project.</COMMENTS>
+        <COMMENTS></COMMENTS>
         <SEVERITY_OVERRIDE/>
         <SEVERITY_JUSTIFICATION/>
       </VULN>
@@ -2307,12 +2280,11 @@ PASS -- System Package postfix should not be installed
           <ATTRIBUTE_DATA>Nginx Security Technical Implementation Guide :: Release: 1</ATTRIBUTE_DATA>
         </STIG_DATA>
         <STATUS>NotAFinding</STATUS>
-        <FINDING_DETAILS>All Automated tests passed for the control 
+        <FINDING_DETAILS>All Automated tests passed for the control
 
  PASS -- System Package audit should be installed
 </FINDING_DETAILS>
-        <COMMENTS>
-2017-12-08 17:47:41 -0500: Automated compliance tests brought to you by the MITRE corporation and the InSpec project.</COMMENTS>
+        <COMMENTS></COMMENTS>
         <SEVERITY_OVERRIDE/>
         <SEVERITY_JUSTIFICATION/>
       </VULN>
@@ -2381,13 +2353,12 @@ PASS -- System Package postfix should not be installed
           <ATTRIBUTE_DATA>Nginx Security Technical Implementation Guide :: Release: 1</ATTRIBUTE_DATA>
         </STIG_DATA>
         <STATUS>NotAFinding</STATUS>
-        <FINDING_DETAILS>All Automated tests passed for the control 
+        <FINDING_DETAILS>All Automated tests passed for the control
 
  PASS -- Nginx Environment modules should be in "http_addition", "http_auth_request", "http_dav", "http_flv", "http_gunzip", "http_gzip_static", "http_mp4", "http_random_index", "http_realip", "http_secure_link", "http_slice", "http_ssl", "http_stub_status", "http_sub", "http_v2", "mail_ssl", "stream_realip", "stream_ssl", and "stream_ssl_preread"
 PASS -- Nginx Environment modules should not be in
 </FINDING_DETAILS>
-        <COMMENTS>
-2017-12-08 17:47:41 -0500: Automated compliance tests brought to you by the MITRE corporation and the InSpec project.</COMMENTS>
+        <COMMENTS></COMMENTS>
         <SEVERITY_OVERRIDE/>
         <SEVERITY_JUSTIFICATION/>
       </VULN>
@@ -2452,12 +2423,11 @@ PASS -- Nginx Environment modules should not be in
           <ATTRIBUTE_DATA>Nginx Security Technical Implementation Guide :: Release: 1</ATTRIBUTE_DATA>
         </STIG_DATA>
         <STATUS>NotAFinding</STATUS>
-        <FINDING_DETAILS>All Automated tests passed for the control 
+        <FINDING_DETAILS>All Automated tests passed for the control
 
  PASS -- Nginx Environment modules should not include "ngx_http_dav"
 </FINDING_DETAILS>
-        <COMMENTS>
-2017-12-08 17:47:41 -0500: Automated compliance tests brought to you by the MITRE corporation and the InSpec project.</COMMENTS>
+        <COMMENTS></COMMENTS>
         <SEVERITY_OVERRIDE/>
         <SEVERITY_JUSTIFICATION/>
       </VULN>
@@ -2519,12 +2489,11 @@ PASS -- Nginx Environment modules should not be in
           <ATTRIBUTE_DATA>Nginx Security Technical Implementation Guide :: Release: 1</ATTRIBUTE_DATA>
         </STIG_DATA>
         <STATUS>NotAFinding</STATUS>
-        <FINDING_DETAILS>All Automated tests passed for the control 
+        <FINDING_DETAILS>All Automated tests passed for the control
 
  PASS -- Nginx Environment modules should not include "ngx_http_status"
 </FINDING_DETAILS>
-        <COMMENTS>
-2017-12-08 17:47:41 -0500: Automated compliance tests brought to you by the MITRE corporation and the InSpec project.</COMMENTS>
+        <COMMENTS></COMMENTS>
         <SEVERITY_OVERRIDE/>
         <SEVERITY_JUSTIFICATION/>
       </VULN>
@@ -2593,12 +2562,11 @@ PASS -- Nginx Environment modules should not be in
           <ATTRIBUTE_DATA>Nginx Security Technical Implementation Guide :: Release: 1</ATTRIBUTE_DATA>
         </STIG_DATA>
         <STATUS>NotAFinding</STATUS>
-        <FINDING_DETAILS>All Automated tests passed for the control 
+        <FINDING_DETAILS>All Automated tests passed for the control
 
  PASS -- Nginx Environment modules should not include "ngx_http_proxy"
 </FINDING_DETAILS>
-        <COMMENTS>
-2017-12-08 17:47:41 -0500: Automated compliance tests brought to you by the MITRE corporation and the InSpec project.</COMMENTS>
+        <COMMENTS></COMMENTS>
         <SEVERITY_OVERRIDE/>
         <SEVERITY_JUSTIFICATION/>
       </VULN>
@@ -2661,7 +2629,7 @@ PASS -- Nginx Environment modules should not be in
           <ATTRIBUTE_DATA>Nginx Security Technical Implementation Guide :: Release: 1</ATTRIBUTE_DATA>
         </STIG_DATA>
         <STATUS>NotAFinding</STATUS>
-        <FINDING_DETAILS>All Automated tests passed for the control 
+        <FINDING_DETAILS>All Automated tests passed for the control
 
  PASS -- File /var/run/nginx.pid should exist
 PASS -- File /var/run/nginx.pid owner should be in "root" and "nginx"
@@ -2670,8 +2638,7 @@ PASS -- File /var/run/nginx.pid mode should cmp &lt;= 432
 PASS -- /var/run/nginx.pid should not match "/usr/share/nginx/html/app1"
 PASS -- /var/run/nginx.pid should not match "/usr/share/nginx/html/app2"
 </FINDING_DETAILS>
-        <COMMENTS>
-2017-12-08 17:47:41 -0500: Automated compliance tests brought to you by the MITRE corporation and the InSpec project.</COMMENTS>
+        <COMMENTS></COMMENTS>
         <SEVERITY_OVERRIDE/>
         <SEVERITY_JUSTIFICATION/>
       </VULN>
@@ -2746,14 +2713,13 @@ PASS -- /var/run/nginx.pid should not match "/usr/share/nginx/html/app2"
           <ATTRIBUTE_DATA>Nginx Security Technical Implementation Guide :: Release: 1</ATTRIBUTE_DATA>
         </STIG_DATA>
         <STATUS>NotAFinding</STATUS>
-        <FINDING_DETAILS>All Automated tests passed for the control 
+        <FINDING_DETAILS>All Automated tests passed for the control
 
  PASS -- localhost:80 should match /[0-9]+(?:\.[0-9]+){3}|[a-zA-Z]:[0-9]+/
 PASS -- localhost should not cmp == "0.0.0.0"
 PASS -- localhost should not cmp == "[::ffff:0.0.0.0]"
 </FINDING_DETAILS>
-        <COMMENTS>
-2017-12-08 17:47:41 -0500: Automated compliance tests brought to you by the MITRE corporation and the InSpec project.</COMMENTS>
+        <COMMENTS></COMMENTS>
         <SEVERITY_OVERRIDE/>
         <SEVERITY_JUSTIFICATION/>
       </VULN>
@@ -2818,12 +2784,11 @@ PASS -- localhost should not cmp == "[::ffff:0.0.0.0]"
           <ATTRIBUTE_DATA>Nginx Security Technical Implementation Guide :: Release: 1</ATTRIBUTE_DATA>
         </STIG_DATA>
         <STATUS>NotAFinding</STATUS>
-        <FINDING_DETAILS>All Automated tests passed for the control 
+        <FINDING_DETAILS>All Automated tests passed for the control
 
  PASS -- Nginx Environment modules should not include "ngx_autoindex"
 </FINDING_DETAILS>
-        <COMMENTS>
-2017-12-08 17:47:41 -0500: Automated compliance tests brought to you by the MITRE corporation and the InSpec project.</COMMENTS>
+        <COMMENTS></COMMENTS>
         <SEVERITY_OVERRIDE/>
         <SEVERITY_JUSTIFICATION/>
       </VULN>
@@ -2896,15 +2861,14 @@ PASS -- localhost should not cmp == "[::ffff:0.0.0.0]"
           <ATTRIBUTE_DATA>Nginx Security Technical Implementation Guide :: Release: 1</ATTRIBUTE_DATA>
         </STIG_DATA>
         <STATUS>NotAFinding</STATUS>
-        <FINDING_DETAILS>All Automated tests passed for the control 
+        <FINDING_DETAILS>All Automated tests passed for the control
 
  PASS -- [{"_"=&gt;["($request_method", "!~", "^(GET|PUT|POST)$", ")"], "return"=&gt;[["444"]]}] should not be nil
 PASS -- {"_"=&gt;["($request_method", "!~", "^(GET|PUT|POST)$", ")"], "return"=&gt;[["444"]]} should not be nil
 PASS -- {"_"=&gt;["($request_method", "!~", "^(GET|PUT|POST)$", ")"], "return"=&gt;[["444"]]} ["_"] should cmp == ["($request_method", "!~", "^(GET|PUT|POST)$", ")"]
 PASS -- {"_"=&gt;["($request_method", "!~", "^(GET|PUT|POST)$", ")"], "return"=&gt;[["444"]]} ["return"] should cmp == [["444"]]
 </FINDING_DETAILS>
-        <COMMENTS>
-2017-12-08 17:47:41 -0500: Automated compliance tests brought to you by the MITRE corporation and the InSpec project.</COMMENTS>
+        <COMMENTS></COMMENTS>
         <SEVERITY_OVERRIDE/>
         <SEVERITY_JUSTIFICATION/>
       </VULN>
@@ -3019,7 +2983,7 @@ PASS -- {"_"=&gt;["($request_method", "!~", "^(GET|PUT|POST)$", ")"], "return"=&
           <ATTRIBUTE_DATA>Nginx Security Technical Implementation Guide :: Release: 1</ATTRIBUTE_DATA>
         </STIG_DATA>
         <STATUS>NotAFinding</STATUS>
-        <FINDING_DETAILS>All Automated tests passed for the control 
+        <FINDING_DETAILS>All Automated tests passed for the control
 
  PASS -- [["on"]] should cmp == [["on"]]
 PASS -- [["'ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:DHE-DSS-AES128-GCM-SHA256:kEDH+AESGCM:ECDHE-RSA-AES128-SHA256:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA:ECDHE-ECDSA-AES256-SHA:DHE-RSA-AES128-SHA256:DHE-RSA-AES128-SHA:DHE-DSS-AES128-SHA256:DHE-RSA-AES256-SHA256:DHE-DSS-AES256-SHA:DHE-RSA-AES256-SHA:AES128-GCM-SHA256:AES256-GCM-SHA384:AES128-SHA256:AES256-SHA256:AES128-SHA:AES256-SHA:AES:CAMELLIA:DES-CBC3-SHA:!aNULL:!eNULL:!EXPORT:!DES:!RC4:!MD5:!PSK:!aECDH:!EDH-DSS-DES-CBC3-SHA:!EDH-RSA-DES-CBC3-SHA:!KRB5-DES-CBC3-SHA@STRENGTH'"]] should not be nil
@@ -3032,8 +2996,7 @@ PASS -- 'ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES
 PASS -- 'ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:DHE-DSS-AES128-GCM-SHA256:kEDH+AESGCM:ECDHE-RSA-AES128-SHA256:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA:ECDHE-ECDSA-AES256-SHA:DHE-RSA-AES128-SHA256:DHE-RSA-AES128-SHA:DHE-DSS-AES128-SHA256:DHE-RSA-AES256-SHA256:DHE-DSS-AES256-SHA:DHE-RSA-AES256-SHA:AES128-GCM-SHA256:AES256-GCM-SHA384:AES128-SHA256:AES256-SHA256:AES128-SHA:AES256-SHA:AES:CAMELLIA:DES-CBC3-SHA:!aNULL:!eNULL:!EXPORT:!DES:!RC4:!MD5:!PSK:!aECDH:!EDH-DSS-DES-CBC3-SHA:!EDH-RSA-DES-CBC3-SHA:!KRB5-DES-CBC3-SHA@STRENGTH' should match "!RC4"
 PASS -- 'ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:DHE-DSS-AES128-GCM-SHA256:kEDH+AESGCM:ECDHE-RSA-AES128-SHA256:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA:ECDHE-ECDSA-AES256-SHA:DHE-RSA-AES128-SHA256:DHE-RSA-AES128-SHA:DHE-DSS-AES128-SHA256:DHE-RSA-AES256-SHA256:DHE-DSS-AES256-SHA:DHE-RSA-AES256-SHA:AES128-GCM-SHA256:AES256-GCM-SHA384:AES128-SHA256:AES256-SHA256:AES128-SHA:AES256-SHA:AES:CAMELLIA:DES-CBC3-SHA:!aNULL:!eNULL:!EXPORT:!DES:!RC4:!MD5:!PSK:!aECDH:!EDH-DSS-DES-CBC3-SHA:!EDH-RSA-DES-CBC3-SHA:!KRB5-DES-CBC3-SHA@STRENGTH' should match "@STRENGTH"
 </FINDING_DETAILS>
-        <COMMENTS>
-2017-12-08 17:47:41 -0500: Automated compliance tests brought to you by the MITRE corporation and the InSpec project.</COMMENTS>
+        <COMMENTS></COMMENTS>
         <SEVERITY_OVERRIDE/>
         <SEVERITY_JUSTIFICATION/>
       </VULN>
@@ -3110,11 +3073,10 @@ PASS -- 'ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES
           <ATTRIBUTE_DATA>Nginx Security Technical Implementation Guide :: Release: 1</ATTRIBUTE_DATA>
         </STIG_DATA>
         <STATUS>Not_Reviewed</STATUS>
-        <FINDING_DETAILS>Automated test skipped due to known accepted condition in the control : 
+        <FINDING_DETAILS>Automated test skipped due to known accepted condition in the control :
 
 Skipped control due to only_if condition.</FINDING_DETAILS>
-        <COMMENTS>
-2017-12-08 17:47:41 -0500: Automated compliance tests brought to you by the MITRE corporation and the InSpec project.</COMMENTS>
+        <COMMENTS></COMMENTS>
         <SEVERITY_OVERRIDE/>
         <SEVERITY_JUSTIFICATION/>
       </VULN>
@@ -3193,7 +3155,7 @@ Skipped control due to only_if condition.</FINDING_DETAILS>
           <ATTRIBUTE_DATA>Nginx Security Technical Implementation Guide :: Release: 1</ATTRIBUTE_DATA>
         </STIG_DATA>
         <STATUS>NotAFinding</STATUS>
-        <FINDING_DETAILS>All Automated tests passed for the control 
+        <FINDING_DETAILS>All Automated tests passed for the control
 
  PASS -- ["auditd", "autovt@", "blk-availability", "brandbot", "console-getty", "console-shell", "container-getty@", "dbus-org.freedesktop.hostname1", "dbus-org.freedesktop.import1", "dbus-org.freedesktop.locale1", "dbus-org.freedesktop.login1", "dbus-org.freedesktop.machine1", "dbus-org.freedesktop.timedate1", "dbus", "debug-shell", "dracut-cmdline", "dracut-initqueue", "dracut-mount", "dracut-pre-mount", "dracut-pre-pivot", "dracut-pre-trigger", "dracut-pre-udev", "dracut-shutdown", "emergency", "fstrim", "getty@", "halt-local", "initrd-cleanup", "initrd-parse-etc", "initrd-switch-root", "initrd-udevadm-cleanup-db", "kmod-static-nodes", "messagebus", "nginx-debug", "nginx", "quotaon", "rc-local", "rdisc", "rescue", "rhel-autorelabel-mark", "rhel-autorelabel", "rhel-configure", "rhel-dmesg", "rhel-domainname", "rhel-import-state", "rhel-loadmodules", "rhel-readonly", "serial-getty@", "systemd-ask-password-console", "systemd-ask-password-wall", "systemd-backlight@", "systemd-binfmt", "systemd-bootchart", "systemd-firstboot", "systemd-fsck-root", "systemd-fsck@", "systemd-halt", "systemd-hibernate-resume@", "systemd-hibernate", "systemd-hostnamed", "systemd-hwdb-update", "systemd-hybrid-sleep", "systemd-importd", "systemd-initctl", "systemd-journal-catalog-update", "systemd-journal-flush", "systemd-journald", "systemd-kexec", "systemd-localed", "systemd-logind", "systemd-machine-id-commit", "systemd-machined", "systemd-modules-load", "systemd-nspawn@", "systemd-poweroff", "systemd-quotacheck", "systemd-random-seed", "systemd-readahead-collect", "systemd-readahead-done", "systemd-readahead-drop", "systemd-readahead-replay", "systemd-reboot", "systemd-remount-fs", "systemd-rfkill@", "systemd-shutdownd", "systemd-suspend", "systemd-sysctl", "systemd-timedated", "systemd-tmpfiles-clean", "systemd-tmpfiles-setup-dev", "systemd-tmpfiles-setup", "systemd-udev-settle", "systemd-udev-trigger", "systemd-udevd", "systemd-update-done", "systemd-update-utmp-runlevel", "systemd-update-utmp", "systemd-user-sessions", "systemd-vconsole-setup"] should be in "auditd", "autovt@", "blk-availability", "brandbot", "console-getty", "console-shell", "container-getty@", "dbus-org.freedesktop.hostname1", "dbus-org.freedesktop.import1", "dbus-org.freedesktop.locale1", "dbus-org.freedesktop.login1", "dbus-org.freedesktop.machine1", "dbus-org.freedesktop.timedate1", "dbus", "debug-shell", "dracut-cmdline", "dracut-initqueue", "dracut-mount", "dracut-pre-mount", "dracut-pre-pivot", "dracut-pre-trigger", "dracut-pre-udev", "dracut-shutdown", "emergency", "fstrim", "getty@", "halt-local", "initrd-cleanup", "initrd-parse-etc", "initrd-switch-root", "initrd-udevadm-cleanup-db", "kmod-static-nodes", "messagebus", "nginx-debug", "nginx", "qemu-guest-agent", "quotaon", "rc-local", "rdisc", "rescue", "rhel-autorelabel-mark", "rhel-autorelabel", "rhel-configure", "rhel-dmesg", "rhel-domainname", "rhel-import-state", "rhel-loadmodules", "rhel-readonly", "serial-getty@", "systemd-ask-password-console", "systemd-ask-password-wall", "systemd-backlight@", "systemd-binfmt", "systemd-bootchart", "systemd-firstboot", "systemd-fsck-root", "systemd-fsck@", "systemd-halt", "systemd-hibernate-resume@", "systemd-hibernate", "systemd-hostnamed", "systemd-hwdb-update", "systemd-hybrid-sleep", "systemd-importd", "systemd-initctl", "systemd-journal-catalog-update", "systemd-journal-flush", "systemd-journald", "systemd-kexec", "systemd-localed", "systemd-logind", "systemd-machine-id-commit", "systemd-machined", "systemd-modules-load", "systemd-nspawn@", "systemd-poweroff", "systemd-quotacheck", "systemd-random-seed", "systemd-readahead-collect", "systemd-readahead-done", "systemd-readahead-drop", "systemd-readahead-replay", "systemd-reboot", "systemd-remount-fs", "systemd-rfkill@", "systemd-shutdownd", "systemd-suspend", "systemd-sysctl", "systemd-timedated", "systemd-tmpfiles-clean", "systemd-tmpfiles-setup-dev", "systemd-tmpfiles-setup", "systemd-udev-settle", "systemd-udev-trigger", "systemd-udevd", "systemd-update-done", "systemd-update-utmp-runlevel", "systemd-update-utmp", "systemd-user-sessions", and "systemd-vconsole-setup"
 PASS -- ["auditd", "autovt@", "blk-availability", "brandbot", "console-getty", "console-shell", "container-getty@", "dbus-org.freedesktop.hostname1", "dbus-org.freedesktop.import1", "dbus-org.freedesktop.locale1", "dbus-org.freedesktop.login1", "dbus-org.freedesktop.machine1", "dbus-org.freedesktop.timedate1", "dbus", "debug-shell", "dracut-cmdline", "dracut-initqueue", "dracut-mount", "dracut-pre-mount", "dracut-pre-pivot", "dracut-pre-trigger", "dracut-pre-udev", "dracut-shutdown", "emergency", "fstrim", "getty@", "halt-local", "initrd-cleanup", "initrd-parse-etc", "initrd-switch-root", "initrd-udevadm-cleanup-db", "kmod-static-nodes", "messagebus", "nginx-debug", "nginx", "quotaon", "rc-local", "rdisc", "rescue", "rhel-autorelabel-mark", "rhel-autorelabel", "rhel-configure", "rhel-dmesg", "rhel-domainname", "rhel-import-state", "rhel-loadmodules", "rhel-readonly", "serial-getty@", "systemd-ask-password-console", "systemd-ask-password-wall", "systemd-backlight@", "systemd-binfmt", "systemd-bootchart", "systemd-firstboot", "systemd-fsck-root", "systemd-fsck@", "systemd-halt", "systemd-hibernate-resume@", "systemd-hibernate", "systemd-hostnamed", "systemd-hwdb-update", "systemd-hybrid-sleep", "systemd-importd", "systemd-initctl", "systemd-journal-catalog-update", "systemd-journal-flush", "systemd-journald", "systemd-kexec", "systemd-localed", "systemd-logind", "systemd-machine-id-commit", "systemd-machined", "systemd-modules-load", "systemd-nspawn@", "systemd-poweroff", "systemd-quotacheck", "systemd-random-seed", "systemd-readahead-collect", "systemd-readahead-done", "systemd-readahead-drop", "systemd-readahead-replay", "systemd-reboot", "systemd-remount-fs", "systemd-rfkill@", "systemd-shutdownd", "systemd-suspend", "systemd-sysctl", "systemd-timedated", "systemd-tmpfiles-clean", "systemd-tmpfiles-setup-dev", "systemd-tmpfiles-setup", "systemd-udev-settle", "systemd-udev-trigger", "systemd-udevd", "systemd-update-done", "systemd-update-utmp-runlevel", "systemd-update-utmp", "systemd-user-sessions", "systemd-vconsole-setup"] should not be in "mysql", "postgres", and "named"
@@ -3495,8 +3457,7 @@ PASS -- /usr/lib/systemd/systemd-vconsole-setup should not cmp == "/"
 PASS -- /usr/lib/systemd/systemd-vconsole-setup should not match "/usr/share/nginx/html/app1"
 PASS -- /usr/lib/systemd/systemd-vconsole-setup should not match "/usr/share/nginx/html/app2"
 </FINDING_DETAILS>
-        <COMMENTS>
-2017-12-08 17:47:41 -0500: Automated compliance tests brought to you by the MITRE corporation and the InSpec project.</COMMENTS>
+        <COMMENTS></COMMENTS>
         <SEVERITY_OVERRIDE/>
         <SEVERITY_JUSTIFICATION/>
       </VULN>
@@ -3562,14 +3523,13 @@ PASS -- /usr/lib/systemd/systemd-vconsole-setup should not match "/usr/share/ngi
           <ATTRIBUTE_DATA>Nginx Security Technical Implementation Guide :: Release: 1</ATTRIBUTE_DATA>
         </STIG_DATA>
         <STATUS>NotAFinding</STATUS>
-        <FINDING_DETAILS>All Automated tests passed for the control 
+        <FINDING_DETAILS>All Automated tests passed for the control
 
  PASS -- [["off"]] should cmp == [["off"]]
 PASS -- should equal nil
 PASS -- should equal nil
 </FINDING_DETAILS>
-        <COMMENTS>
-2017-12-08 17:47:41 -0500: Automated compliance tests brought to you by the MITRE corporation and the InSpec project.</COMMENTS>
+        <COMMENTS></COMMENTS>
         <SEVERITY_OVERRIDE/>
         <SEVERITY_JUSTIFICATION/>
       </VULN>
@@ -3636,12 +3596,11 @@ If the entry is not found, this is a finding.</ATTRIBUTE_DATA>
           <ATTRIBUTE_DATA>Nginx Security Technical Implementation Guide :: Release: 1</ATTRIBUTE_DATA>
         </STIG_DATA>
         <STATUS>NotAFinding</STATUS>
-        <FINDING_DETAILS>All Automated tests passed for the control 
+        <FINDING_DETAILS>All Automated tests passed for the control
 
  PASS -- [["TLSv1", "TLSv1.1", "TLSv1.2"]] should cmp == [["TLSv1", "TLSv1.1", "TLSv1.2"]]
 </FINDING_DETAILS>
-        <COMMENTS>
-2017-12-08 17:47:41 -0500: Automated compliance tests brought to you by the MITRE corporation and the InSpec project.</COMMENTS>
+        <COMMENTS></COMMENTS>
         <SEVERITY_OVERRIDE/>
         <SEVERITY_JUSTIFICATION/>
       </VULN>
