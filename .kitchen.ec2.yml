@@ -1,19 +1,47 @@
+<%
+  use_json = true
+  use_ebs = false
+%>
+---
 driver:
-  name: dokken
+  name: ec2
   chef_version: latest
-  privileged: true # because Docker and SystemD/Upstart
-
-transport:
-  name: dokken
+  privileged: true
+  security_group_ids: <%= ENV['AWS_SG_ID'] %>
+  aws_ssh_key_id: <%= ENV['AWS_SSH_KEY_ID'] %>
+  subnet_id: <%= ENV['AWS_SUBNET_ID'] %>
+<% if use_ebs == true %>
+  ebs_optimized: true
+  instance_type: i3.2xlarge
+  block_device_mappings:
+    - device_name: /dev/sda1
+      ebs:
+        volume_type: gp2
+        delete_on_termination: true
+<% end %>
 
 provisioner:
-  name: dokken
+  name: chef_solo
+
+transport:
+  name: ssh
+  connection_retries: 12
+  connection_retry_sleep: 10
+  ssh_key: ~/.ssh/<%= ENV['AWS_SSH_KEY_ID'] %>.pem
 
 verifier:
   name: inspec
   sudo: true
-  #format: json
-  #output: "%{platform}_%{suite}-<%= Time.now.iso8601 %>.json"
+  sudo_options: '-u root'
+  inspec_tests:
+    - name: nginix-baseline
+      git: https://github.com/aaronlippold/nginx-baseline.git
+  attrs:
+    - aws.attributes.yml
+  <% if use_json == true %>
+  format: json
+  output: "%{platform}_%{suite}-<%= Time.now.iso8601 %>.json"
+  <% end %>
 
 platforms:
 - name: debian-7
@@ -47,19 +75,6 @@ platforms:
     pid_one_command: /usr/lib/systemd/systemd
     intermediate_instructions:
       - RUN yum -y install lsof which systemd-sysv initscripts
-
-- name: centos-7-aws
-  driver:
-    name: ec2
-    aws_ssh_key_id: aws_cert
-    security_group_ids: ["sg-eb31359b"]
-    image_id:   ami-46c1b650
-    privileged: true
-  provisioner:
-    name: chef_solo
-  transport:
-    name: ssh
-    ssh_key: ~/.ssh/aws_cert.pem
 
 - name: fedora-latest
   driver:
@@ -103,16 +118,10 @@ platforms:
     intermediate_instructions:
       - RUN zypper --non-interactive install aaa_base perl-Getopt-Long-Descriptive which
 
-
 suites:
-- name: default
-  run_list:
+  - name: default
+    run_list:
     - recipe[apt]
     - recipe[nginx-hardening::upgrades]
     - recipe[chef_nginx]
     - recipe[nginx-hardening]
-  verifier:
-    inspec_tests:
-      - git: https://github.com/aaronlippold/nginx-baseline.git
-    # attrs:
-    #   - aws.attributes.yml
