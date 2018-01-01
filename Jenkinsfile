@@ -13,4 +13,4 @@ peline {
             junit 'build/reports/**/*.xml'
         }
     }
-}}    
+}    
