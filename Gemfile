@@ -31,6 +31,7 @@ group :integration do
   gem 'kitchen-vagrant'
   gem 'kitchen-dokken'
   gem 'kitchen-inspec'
+  gem 'kitchen-ec2'
   gem 'concurrent-ruby', '~> 1.0.5'
 end
 

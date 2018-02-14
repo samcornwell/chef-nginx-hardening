@@ -25,7 +25,7 @@ node.default['nginx-hardening']['options']['ssl_dhparam'] = ::File.join((node['n
 node.default['nginx-hardening']['options']['ssl_certificate'] = ::File.join((node['nginx-hardening']['certificates_dir'] || '/etc/nginx/'), 'nginx-selfsigned.pem')
 node.default['nginx-hardening']['options']['ssl_certificate_key'] = ::File.join((node['nginx-hardening']['certificates_dir'] || '/etc/nginx/'), 'nginx-selfsigned.key')
 node.default['nginx-hardening']['options']['ssl_client_certificate'] = ::File.join((node['nginx-hardening']['certificates_dir'] || '/etc/nginx/'), 'dod-root-certs.pem')
-node.default['nginx-hardening']['options']['ssl_crl'] = ::File.join((node['nginx-hardening']['certificates_dir'] || '/etc/nginx/'), 'DOD.crl')
+node.default['nginx-hardening']['options']['ssl_crl'] = ::File.join((node['nginx-hardening']['certificates_dir'] || '/etc/nginx/'), 'DOD_CRL-bundle.crl')
 
 
 options = node['nginx-hardening']['options'].to_hash
@@ -88,21 +88,27 @@ node['cert_files'].each do |cert|
   end
 end
 
-cookbook_file 'DOD.crl.tar.gz' do
-  path ::File.join((node['nginx-hardening']['certificates_dir'] || '/etc/nginx/'), 'DOD.crl.tar.gz')
-  source 'DOD.crl.tar.gz'
-  action :create
-end
 
-bash 'extract_module' do
+package "unzip" 
+package "wget" 
+
+bash 'update/install DOD CRL bundle' do
   cwd ::File.join((node['nginx-hardening']['certificates_dir'] || '/etc/nginx/'))
   code <<-EOH
-    tar -xf DOD.crl.tar.gz
-    rm DOD.crl.tar.gz
+      rm DOD_CRL-bundle.crl # Remove any pre-existing one.
+      rm -rf crl_temp; mkdir crl_temp; cd crl_temp # Create temp dir to make bundle
+      wget "https://crl.disa.mil/getcrlzip?ALL+CRL+ZIP" --no-check-certificate -O ALLCRLZIP.zip
+      unzip ALLCRLZIP.zip
+      for f in *.crl ; do  # Convert to PEM format.
+        openssl crl -inform DER -outform PEM -in "$f" -out "${f%.crl}.pem_crl"
+      done
+      cat *.pem_crl > DOD_CRL-bundle.crl
+      mv DOD_CRL-bundle.crl ../ 
+      cd ../; rm -rf crl_temp # Remove temp dir to make bundle
     EOH
 end
 
-file File.join((node['nginx-hardening']['certificates_dir'] || '/etc/nginx/'), 'DOD.crl') do
+file File.join((node['nginx-hardening']['certificates_dir'] || '/etc/nginx/'), 'DOD_CRL-bundle.crl') do
   owner node['system_admin']
   group node['system_admin']
   mode '0660'
