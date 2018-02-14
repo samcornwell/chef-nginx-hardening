@@ -63,8 +63,8 @@ file '/usr/share/man/man8/nginx.8.gz' do
   action :delete
 end
 
-execute 'generate_dh_group' do
-  command "openssl dhparam -out #{node['nginx-hardening']['options']['ssl_dhparam']} #{node['nginx-hardening']['dh-size']}"
+openssl_dhparam node['nginx-hardening']['options']['ssl_dhparam'] do
+  key_length node['nginx-hardening']['dh-size']
   not_if { File.exist?(node['nginx-hardening']['options']['ssl_dhparam']) }
 end
 
@@ -106,6 +106,8 @@ bash 'update/install DOD CRL bundle' do
       mv DOD_CRL-bundle.crl ../ 
       cd ../; rm -rf crl_temp # Remove temp dir to make bundle
     EOH
+  # Run if CRL was updated more than specified days ago
+  not_if { File.exist?(node['nginx-hardening']['options']['ssl_crl']) and File.ctime(node['nginx-hardening']['options']['ssl_crl']) >  Time.now - node['nginx-hardening']['crl_udpate_frequency_days'] * 86400 }
 end
 
 file File.join((node['nginx-hardening']['certificates_dir'] || '/etc/nginx/'), 'DOD_CRL-bundle.crl') do
@@ -151,7 +153,5 @@ cookbook_file '/var/www/vserver1/html/index.html' do
   mode '1755'
   action :create
 end
-
-
 
 
