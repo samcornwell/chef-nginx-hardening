@@ -100,7 +100,7 @@ suites:
     aws_ssh_key_id:  <%= ENV['AWS_SSH_KEY_ID'] %>
     security_group_ids: ["<%= ENV['AWS_SG_ID'] %>"]
     # image_id:   ami-46c1b650 #optional if a specific ami is needed
-    # instance_type: t2.micro #optional instance type default:t2.micro
+    instance_type: t2.large #optional instance type default:t2.micro
     privileged: true
   provisioner:
     name: chef_solo

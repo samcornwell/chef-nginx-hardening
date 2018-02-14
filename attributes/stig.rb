@@ -23,6 +23,9 @@ include_attribute 'nginx'
 
 # to be on par with the puppet module defaults
 
+default['system_admin'] = 'root'
+default['nginx_owner'] = 'nginx'
+
 #V-13727
 default['nginx']['worker_processes'] = 'auto'
 
@@ -35,9 +38,6 @@ default['nginx']['keepalive_timeout'] = '5 5'
 default['nginx-hardening']['disable_symlinks'] = 'on'
 default['nginx-hardening']['autoindex'] = 'off'
 
-default['system_admin'] = 'root'
-default['nginx_owner'] = 'nginx'
-
 if platform_family?('debian')
     default['include_packages'] = ['auditd']
 end
@@ -49,14 +49,7 @@ default['nginx-hardening']['certificates_dir'] = '/etc/ssl/certs/'
 
 default['remove_packages'] = ['postfix']
 
-default['virtual_servers'] = ['/etc/nginx/sites-enabled/vserver1.conf']
-
-default['webapp_files']['vserver1'] = ['/var/www/vserver1/html/index.html']
-
-default['root_folders'] = ['/var/www/vserver1/html']
-
 default['cert_files'] = ['dod-root-certs.pem']
-
 
 default['nginx_files'] = ['/etc/nginx/nginx.conf',
                          '/etc/nginx/mime.types',

@@ -124,11 +124,11 @@ template "#{node['nginx']['dir']}/conf.d/90.hardening.conf" do
   notifies :restart, 'service[nginx]', :immediately
 end
 
-template "#{node['nginx']['dir']}/sites-enabled/vserver1.conf" do
+template "#{node['nginx']['dir']}/sites-enabled/vserver.conf" do
   source 'server.erb'
   variables(
-    listen: "#{node['ipaddress']}:443 ssl",
-    docroot: '/var/www/vserver1/html/'
+    listen: [ "#{node['ipaddress']}:443 ssl", "#{node['ipaddress']}:80" ],
+    docroot: '/var/www/vserver/html/'
   )
   owner node['nginx_owner']
   group node['nginx_owner']
@@ -137,7 +137,7 @@ end
 
 #@TODO each the dirs on the path to the web app must have the following permissions
 # need a way to do this better
-['/var/www/','/var/www/vserver1/','/var/www/vserver1/html/'].each do |folder|
+['/var/www/','/var/www/vserver/','/var/www/vserver/html/'].each do |folder|
   directory folder do
     owner node['nginx_owner']
     group node['nginx_owner']
@@ -146,7 +146,7 @@ end
   end
 end
 
-cookbook_file '/var/www/vserver1/html/index.html' do
+cookbook_file '/var/www/vserver/html/index.html' do
   source 'index.html'
   owner node['nginx_owner']
   group node['nginx_owner']

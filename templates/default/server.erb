@@ -1,5 +1,7 @@
 server {
-    listen <%= @listen %>;
+	<% @listen.each do |param| %>
+	  listen <%= param %>;
+	<% end %>
     root    <%= @docroot %>;
 
     location /application {
