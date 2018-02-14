@@ -22,6 +22,12 @@
 include_recipe('nginx-hardening::minimize_access')
 
 node.default['nginx-hardening']['options']['ssl_dhparam'] = ::File.join((node['nginx-hardening']['certificates_dir'] || '/etc/nginx/'), 'dh2048.pem')
+node.default['nginx-hardening']['options']['ssl_certificate'] = ::File.join((node['nginx-hardening']['certificates_dir'] || '/etc/nginx/'), 'nginx-selfsigned.pem')
+node.default['nginx-hardening']['options']['ssl_certificate_key'] = ::File.join((node['nginx-hardening']['certificates_dir'] || '/etc/nginx/'), 'nginx-selfsigned.key')
+node.default['nginx-hardening']['options']['ssl_client_certificate'] = ::File.join((node['nginx-hardening']['certificates_dir'] || '/etc/nginx/'), 'dod-root-certs.pem')
+node.default['nginx-hardening']['options']['ssl_crl'] = ::File.join((node['nginx-hardening']['certificates_dir'] || '/etc/nginx/'), 'DOD_CRL-bundle.crl')
+
+
 options = node['nginx-hardening']['options'].to_hash
 
 # OS-specific configuration
@@ -47,13 +53,6 @@ if platform_family?('rhel', 'fedora')
   end
 end
 
-template "#{node['nginx']['dir']}/conf.d/90.hardening.conf" do
-  source 'extras.conf.erb'
-  variables(
-    options: NginxHardening.options(options)
-  )
-  notifies :restart, 'service[nginx]', :immediately
-end
 
 file '/etc/nginx/conf.d/default.conf' do
   action :delete
@@ -69,49 +68,19 @@ execute 'generate_dh_group' do
   not_if { File.exist?(node['nginx-hardening']['options']['ssl_dhparam']) }
 end
 
-directory '/usr/sbin/nginx' do
-  owner node['system_admin']
-  group node['system_admin']
-  mode '550'
-end
-
-directory '/etc/nginx/' do
-  owner node['system_admin']
-  group node['system_admin']
-  mode '770'
-end
-
-directory '/etc/nginx/conf.d' do
-  owner node['system_admin']
-  group node['system_admin']
-  mode '770'
-end
-
-directory '/etc/nginx/modules' do
-  owner node['system_admin']
-  group node['system_admin']
-  mode '770'
-end
-directory '/usr/share/nginx/html' do
-  owner node['nginx_owner']
-  group node['nginx_owner']
-  mode '664'
-end
-directory '/var/log/nginx' do
-  owner  node['system_admin']
-  group  node['system_admin']
-  mode '750'
-end
-
-directory '/var/local' do
-  owner  node['nginx_owner']
-  group  node['nginx_owner']
-  mode '1660'
+openssl_x509 'generate_self_signed_certs' do
+  path node['nginx-hardening']['options']['ssl_certificate']
+  common_name node['ipaddress']
+  org 'DISA ou=PKI ou=DoD'
+  org_unit 'U.S. Government'
+  country 'US'
+  not_if { File.exist?(node['nginx-hardening']['options']['ssl_certificate']) and File.exist?(node['nginx-hardening']['options']['ssl_certificate_key']) }
 end
 
 node['cert_files'].each do |cert|
   cookbook_file cert do
-    source File.basename(cert)
+    path ::File.join((node['nginx-hardening']['certificates_dir'] || '/etc/nginx/'), cert)
+    source cert
     owner node['system_admin']
     group node['system_admin']
     mode '0660'
@@ -119,30 +88,70 @@ node['cert_files'].each do |cert|
   end
 end
 
-node['virtual_servers'].each do |server|
-  cookbook_file server do
-    source File.basename(server)
-    owner node['nginx_owner']
-    group node['nginx_owner']
-    mode '0660'
-    action :create
-  end
+
+package "unzip" 
+package "wget" 
+
+bash 'update/install DOD CRL bundle' do
+  cwd ::File.join((node['nginx-hardening']['certificates_dir'] || '/etc/nginx/'))
+  code <<-EOH
+      rm DOD_CRL-bundle.crl # Remove any pre-existing one.
+      rm -rf crl_temp; mkdir crl_temp; cd crl_temp # Create temp dir to make bundle
+      wget "https://crl.disa.mil/getcrlzip?ALL+CRL+ZIP" --no-check-certificate -O ALLCRLZIP.zip
+      unzip ALLCRLZIP.zip
+      for f in *.crl ; do  # Convert to PEM format.
+        openssl crl -inform DER -outform PEM -in "$f" -out "${f%.crl}.pem_crl"
+      done
+      cat *.pem_crl > DOD_CRL-bundle.crl
+      mv DOD_CRL-bundle.crl ../ 
+      cd ../; rm -rf crl_temp # Remove temp dir to make bundle
+    EOH
 end
 
-node['nginx_files'].each do |nginx_file|
-  file nginx_file do
-    owner  node['nginx_owner']
-    group  node['nginx_owner']
-    mode '0660'
-  end
+file File.join((node['nginx-hardening']['certificates_dir'] || '/etc/nginx/'), 'DOD_CRL-bundle.crl') do
+  owner node['system_admin']
+  group node['system_admin']
+  mode '0660'
 end
 
+template "#{node['nginx']['dir']}/conf.d/90.hardening.conf" do
+  source 'extras.conf.erb'
+  variables(
+    options: NginxHardening.options(options)
+  )
+  notifies :restart, 'service[nginx]', :immediately
+end
 
-node['root_folders'].each do |folder|
+template "#{node['nginx']['dir']}/sites-enabled/vserver1.conf" do
+  source 'server.erb'
+  variables(
+    listen: 'localhost:443 ssl',
+    docroot: '/var/www/vserver1/html/'
+  )
+  owner node['nginx_owner']
+  group node['nginx_owner']
+  mode '0660'
+end
+
+#@TODO each the dirs on the path to the web app must have the following permissions
+# need a way to do this better
+['/var/www/','/var/www/vserver1/','/var/www/vserver1/html/'].each do |folder|
   directory folder do
     owner node['nginx_owner']
     group node['nginx_owner']
-    mode '1660'
+    mode '1755'
     action :create
   end
 end
+
+cookbook_file '/var/www/vserver1/html/index.html' do
+  source 'index.html'
+  owner node['nginx_owner']
+  group node['nginx_owner']
+  mode '1755'
+  action :create
+end
+
+
+
+

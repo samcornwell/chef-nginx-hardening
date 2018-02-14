@@ -31,11 +31,8 @@ supports 'debian', '>= 7.0'
 supports 'ubuntu', '>= 12.04'
 supports 'centos', '>= 6.6'
 
-<<<<<<< HEAD
 depends 'nginx', '>= 4.0'
-=======
 depends 'nginx', '>= 7.0'
->>>>>>> 13d38aa133278ff7db765cb8f6b812f7d89aa43a
 depends 'openssl'
 
 recipe 'nginx-hardening::default', 'configures nginx for hardening'

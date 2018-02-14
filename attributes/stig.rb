@@ -24,13 +24,13 @@ include_attribute 'nginx'
 # to be on par with the puppet module defaults
 
 #V-13727
-node.set['nginx']['worker_processes'] = 'auto'
+default['nginx']['worker_processes'] = 'auto'
 
 #V-13726
-node.set['nginx']['keepalive_timeout'] = '5 5'
+default['nginx']['keepalive_timeout'] = '5 5'
 
 #V-13726
-node.set['nginx']['keepalive_timeout'] = '5 5'
+default['nginx']['keepalive_timeout'] = '5 5'
 
 default['nginx-hardening']['disable_symlinks'] = 'on'
 default['nginx-hardening']['autoindex'] = 'off'
@@ -44,23 +44,22 @@ end
 if platform_family?('rhel', 'fedora')
     default['include_packages'] = ['audit']
 end
+
+default['nginx-hardening']['certificates_dir'] = '/etc/ssl/certs/'
+
 default['remove_packages'] = ['postfix']
 
 default['virtual_servers'] = ['/etc/nginx/sites-enabled/vserver1.conf']
 
-default['root_folders'] = ['/usr/share/nginx/html/app1',
-                           '/usr/share/nginx/html/app2']
+default['webapp_files']['vserver1'] = ['/var/www/vserver1/html/index.html']
 
-default['cert_files'] = ['/etc/ssl/certs/DOD.crl',
-                         '/etc/ssl/certs/dod-root-certs.pem',
-                         '/etc/ssl/certs/dodeca2.pem',
-                         '/etc/ssl/certs/dodeca.pem',
-                         '/etc/ssl/certs/rel3_dodroot_2048.pem']
+default['root_folders'] = ['/var/www/vserver1/html']
+
+default['cert_files'] = ['dod-root-certs.pem']
+
 
 default['nginx_files'] = ['/etc/nginx/nginx.conf',
                          '/etc/nginx/mime.types',
                          '/etc/nginx/conf.d/90.hardening.conf',
                          '/var/run/nginx.pid']
-
-
 
