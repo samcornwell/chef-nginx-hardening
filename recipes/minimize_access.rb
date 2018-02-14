@@ -30,3 +30,57 @@ execute 'remove world readable files' do
   command "chmod -R o-rw #{node['nginx']['dir']}"
   not_if "find #{node['nginx']['dir']} -perm -o+r -type f -o -perm -o+w -type f | wc -l | egrep '^0$'"
 end
+
+directory '/usr/sbin/nginx' do
+  owner node['system_admin']
+  group node['system_admin']
+  mode '550'
+end
+
+directory '/etc/nginx/' do
+  owner node['system_admin']
+  group node['system_admin']
+  mode '770'
+end
+
+directory '/etc/nginx/conf.d' do
+  owner node['system_admin']
+  group node['system_admin']
+  mode '770'
+end
+
+directory '/etc/nginx/modules' do
+  owner node['system_admin']
+  group node['system_admin']
+  mode '770'
+end
+directory '/usr/share/nginx/html' do
+  owner node['nginx_owner']
+  group node['nginx_owner']
+  mode '664'
+end
+directory '/var/log/nginx' do
+  owner  node['system_admin']
+  group  node['system_admin']
+  mode '750'
+end
+
+directory '/var/local' do
+  owner  node['nginx_owner']
+  group  node['nginx_owner']
+  mode '1660'
+end
+
+directory '/var/www' do
+  owner  node['nginx_owner']
+  group  node['nginx_owner']
+  mode '1755'
+end
+
+node['nginx_files'].each do |nginx_file|
+  file nginx_file do
+    owner  node['nginx_owner']
+    group  node['nginx_owner']
+    mode '0660'
+  end
+end

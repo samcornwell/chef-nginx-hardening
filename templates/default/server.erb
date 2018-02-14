@@ -1,0 +1,12 @@
+server {
+    listen <%= @listen %>;
+    root    <%= @docroot %>;
+
+    location /application {
+      if ($request_method !~ ^(GET|PUT|POST)$ ) {
+      return 444;
+      }
+
+      random_index off;
+    }
+  }

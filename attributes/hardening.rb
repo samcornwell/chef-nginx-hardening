@@ -60,9 +60,6 @@ default['nginx-hardening']['options'] = {
   'limit_conn' => 'default 5',
   'disable_symlinks' => 'on',
   'autoindex' => 'off',
-  'ssl_client_certificate' => '/etc/ssl/certs/dod-root-certs.pem',
-  'ssl_crl' => '/etc/ssl/certs/DOD.crl',
-  'root' => '/usr/share/nginx/html/app1',
   'add_header' => [
     # XSS filter
     'X-XSS-Protection "1; mode=block"',
