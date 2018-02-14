@@ -12,8 +12,8 @@ provisioner:
 verifier:
   name: inspec
   sudo: true
-  #format: json
-  #output: "%{platform}_%{suite}-<%= Time.now.iso8601 %>.json"
+  # reporter: json
+  # output: "%{platform}_%{suite}-<%= Time.now.iso8601 %>.json"
 
 platforms:
 - name: debian-7

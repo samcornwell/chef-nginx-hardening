@@ -94,3 +94,4 @@ default['nginx-hardening']['options']['ssl_ciphers'] = "'ECDHE-RSA-AES128-GCM-SH
 default['nginx-hardening']['options']['ssl_prefer_server_ciphers'] = 'on'
 default['nginx-hardening']['options']['ssl_session_tickets'] = 'off'
 default['nginx-hardening']['dh-size'] = 2048
+default['nginx-hardening']['crl_udpate_frequency_days'] = 7
