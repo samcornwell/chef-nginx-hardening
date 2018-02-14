@@ -48,19 +48,6 @@ platforms:
     intermediate_instructions:
       - RUN yum -y install lsof which systemd-sysv initscripts
 
-- name: centos-7-aws
-  driver:
-    name: ec2
-    aws_ssh_key_id: aws_cert
-    security_group_ids: ["sg-eb31359b"]
-    image_id:   ami-46c1b650
-    privileged: true
-  provisioner:
-    name: chef_solo
-  transport:
-    name: ssh
-    ssh_key: ~/.ssh/aws_cert.pem
-
 - name: fedora-latest
   driver:
     image: fedora:latest
@@ -98,6 +85,29 @@ platforms:
 
 suites:
 - name: default
+  run_list:
+    - recipe[apt]
+    - recipe[nginx-hardening::upgrades]
+    - recipe[nginx]
+    - recipe[nginx-hardening]
+  verifier:
+    inspec_tests:
+      - git: https://github.com/aaronlippold/nginx-baseline.git
+
+- name: ec2
+  driver:
+    name: ec2
+    aws_ssh_key_id:  <%= ENV['AWS_SSH_KEY_ID'] %>
+    security_group_ids: ["<%= ENV['AWS_SG_ID'] %>"]
+    # image_id:   ami-46c1b650 #optional if a specific ami is needed
+    # instance_type: t2.micro #optional instance type default:t2.micro
+    privileged: true
+  provisioner:
+    name: chef_solo
+  transport:
+    name: ssh
+    ssh_key: ~/.ssh/<%= ENV['AWS_SSH_KEY_ID'] %>.pem
+
   run_list:
     - recipe[apt]
     - recipe[nginx-hardening::upgrades]
