@@ -553,7 +553,9 @@ allowed_packages_list:
              "cronie",
              "trousers",
              'qemu-guest-agent',
-             'libverto-libevent']
+             'libverto-libevent',
+             'wget',
+	     'unzip']
 
 
 # description: 'List of disallowed packages',
