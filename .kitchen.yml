@@ -116,5 +116,5 @@ suites:
   verifier:
     inspec_tests:
       - git: https://github.com/aaronlippold/nginx-baseline.git
-    # attrs:
-    #   - aws.attributes.yml
+    attrs:
+      - aws.attributes.yml
