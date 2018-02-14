@@ -127,7 +127,7 @@ end
 template "#{node['nginx']['dir']}/sites-enabled/vserver1.conf" do
   source 'server.erb'
   variables(
-    listen: 'localhost:443 ssl',
+    listen: "#{node['ipaddress']}:443 ssl",
     docroot: '/var/www/vserver1/html/'
   )
   owner node['nginx_owner']
