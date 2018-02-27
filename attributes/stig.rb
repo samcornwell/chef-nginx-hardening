@@ -41,7 +41,7 @@ default['nginx-hardening']['autoindex'] = 'off'
 if platform_family?('debian')
     default['include_packages'] = ['auditd']
 end
-if platform_family?('rhel', 'fedora')
+if platform_family?('rhel', 'fedora', 'amazon')
     default['include_packages'] = ['audit']
 end
 

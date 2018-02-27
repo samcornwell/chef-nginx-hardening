@@ -29,7 +29,7 @@ if platform_family?('debian')
   end
 end
 
-if platform_family?('rhel', 'fedora')
+if platform_family?('rhel', 'fedora', 'amazon')
   execute 'linux_patches' do
     command 'yum update -y'
   end
