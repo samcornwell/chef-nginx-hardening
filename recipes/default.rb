@@ -45,12 +45,16 @@ if platform_family?('debian')
 
 end
 
-if platform_family?('rhel', 'fedora', 'amazon')
+if platform_family?('rhel', 'fedora')
   unless node['nginx']['repo_source'].nil?
     # repo and source installations have no extra modules
     # on RHEL/CentOS/Fedora so the affected options must be removed
     options.delete('more_clear_headers')
   end
+end
+
+if platform_family?('amazon')
+  options.delete('more_clear_headers')
 end
 
 
