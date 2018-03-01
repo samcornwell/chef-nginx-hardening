@@ -128,7 +128,8 @@ template "#{node['nginx']['dir']}/conf.d/90.hardening.conf" do
   notifies :restart, 'service[nginx]', :immediately
 end
 
-template "#{node['nginx']['dir']}/sites-enabled/vserver.conf" do
+vserver_conf = "#{node['nginx']['dir']}/sites-enabled/vserver.conf"
+template vserver_conf do
   source 'server.erb'
   variables(
     listen: [ "#{node['ipaddress']}:443 ssl", "#{node['ipaddress']}:80" ],
@@ -137,6 +138,7 @@ template "#{node['nginx']['dir']}/sites-enabled/vserver.conf" do
   owner node['nginx_owner']
   group node['nginx_owner']
   mode '0660'
+  only_if { File.exist?(vserver_conf) }
 end
 
 #@TODO each the dirs on the path to the web app must have the following permissions
